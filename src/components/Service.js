@@ -7,10 +7,18 @@ const Service = () => {
         <h1 className="flex flex-wrap text-6xl text-white dark:text-black font-medium sm:mt-8 leading-tight">
           Our <span className="text-[#04ABE2] sm:pl-2">services</span>
         </h1>
+
         <p className="flex flex-wrap text-2xl text-[#999999] mt-10">
           We offer global services, driving growth with expertly designed apps.
           Let us elevate your business with cost-effective solutions and unlock
           its full potential.
+          Don't just compete locally, reach new markets and customers
+          worldwide. Our global services team understands the intricacies of
+          international expansion, ensuring your app is culturally relevant and
+          technically sound. We don't stop there. We focus on cost-effective
+          solutions, maximizing your return on investment. Let us elevate your
+          business with cutting-edge mobile and web applications, propelling you
+          towards a thriving future in the global marketplace. 
         </p>
       </div>
       <div className="circles relative  flex justify-center items-center w-1/2">

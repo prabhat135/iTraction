@@ -22,6 +22,7 @@ const ContactUs = () => {
             Our experts are available to discuss your requirements and to become
             your tech partner
           </p>
+
           {/* <form>
               <div className="form-group flex flex-col justify-center p-5 text-white">
               <label className="text-2xl block mb-1 text-left " htmlFor="name">Name</label>
@@ -40,6 +41,7 @@ const ContactUs = () => {
             </button>
           </form> */}
           <form className="pt-6 mt-4 sm:mt-0 ">
+
             <div className="py-6">
               <h2 className="text-2xl text-left text-[#FFFFFF]">Name</h2>
               <input class="appearance-none bg-transparent border-b w-full text-[#FFFFFF] pt-4 leading-normal text-xl focus:outline-none" type="text" placeholder="" aria-label="Full name" />

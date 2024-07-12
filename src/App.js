@@ -15,6 +15,7 @@ function App() {
     <div className="App">
       <Hero />
       <AboutUs />
+
     <Domain />
     <Service />
    <Portfolio />
@@ -23,6 +24,7 @@ function App() {
   <ContactUs />
     <Footer />
   
+
     </div>
   );
 }
