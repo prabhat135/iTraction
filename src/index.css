@@ -16,3 +16,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Assuming you are using Tailwind CSS */
+.circle {
+  transition: transform 0.8s ease;
+}
+
+.circle:hover {
+  transform: scale(2.4); /* Scale the circle to 120% on hover */
+  inset: 5; /* Ensure hovered circle is above others */
+}

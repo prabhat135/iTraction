@@ -3,31 +3,29 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="aboutus flex flex-row justify-around p-20 dark:bg-white">
-      <div className="aboutus-content flex items-center">
-        <div className="aboutus-heading">
-          <h1 className="text-6xl text-white font-medium border-b-2 pb-16 mb-8 leading-tight">
-            we build
-            <span className="text-[#04ABE2] rounded-full px-3 py-2">
-              powerful & <br />
-              smart
-            </span>
-            solutions <br /> deliver top<span>-notch services</span>
-          </h1>
-            <p className="text-xl text-[#999999]">
-            iTRACTION Technologies provides high-end web and mobile app <br />
-            development, leveraging AI-based solutions and over 14 years of <br />
-            expertise. Our skilled team ensures powerful, fast applications <br />
-            tailored to your needs, helping you outrank competitors. What's<br />
+    <div className="aboutus flex flex-col lg:flex-row justify-around lg:px-20 dark:bg-white">
+      <div className="aboutus-content flex flex-col items-center justify-center  lg:w-1/2 p-4 ">
+        <div className="aboutus-heading items-center justify-center text-center lg:text-left">
+          <div className="flex flex-wrap justify-center text-center md:text-left   text-4xl sm:text-5xl lg:text-6xl text-white font-medium border-b-2 pb-4 px-10 sm:pb-8 lg:pb-16 mb-4 sm:mb-8 lg:mb-16 leading-tight">
+            We build  solutions,  & smart
+            delivering top-notch services.
+          </div>
+
+          <p className=" flex flex-wrap px-10 text-center  md:text-left justify-center items-center text-base text-lg lg:text-xl text-[#999999]">
+            iTRACTION Technologies provides high-end web and mobile app
+            development, leveraging AI-based solutions and over 14 years of
+            expertise. Our skilled team ensures powerful, fast applications
+            tailored to your needs, helping you outrank competitors. What's
             stopping you from being the best in the market?
           </p>
         </div>
-        {/* <div className="aboutus-para">
-          
-        </div> */}
       </div>
-      <div className="aboutus-image">
-        <img src="./assets/aboutus.png" alt="" className="h-[800px] w-[580px]"/>
+      <div className="aboutus-image flex justify-center items-center lg:mt-0 lg:w-1/2 p-4">
+        <img
+          src="./assets/aboutus.png"
+          alt="About Us"
+          className="h-auto w-full max-w-md lg:max-w-none lg:w-[400px] lg:h-[800px] xl:w-[580px]"
+        />
       </div>
     </div>
   );
