@@ -12,13 +12,13 @@ const Portfolio = () => {
       </div>
 
       <div className="service-content text-center px-40 pt-3 pb-14">
-        <p className="text-2xl text-[#999999]">
+        <p className="flex flex-wrap text-2xl text-[#999999]">
           Look at how businesses have leveraged our services to excel at what
-          they do. We are <br />excited to add you to our list of happy clients.
+          they do. We are excited to add you to our list of happy clients.
         </p>
       </div>
 
-      <div className="service-card flex flex-row justify-between gap-10 pt-10 pb-5">
+      <div className="service-card flex flex-wrap justify-between gap-10 pt-10 pb-5">
         <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px]">
           <img src="../assets/portfolio.png" alt="" className="w-[250px]" />
           <h2 className="text-3xl font-medium text-white py-9  text-center">
