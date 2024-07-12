@@ -15,7 +15,7 @@ const Header = () => {
       </div>
 
       <div className="header-item">
-        <ul className="flex gap-12 text-lg text-white dark:text-black font-normal">
+        <ul className="flex gap-12 text-xl text-white dark:text-black font-normal">
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             Home
           </li>
@@ -28,7 +28,7 @@ const Header = () => {
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             Contacts
           </li>
-          <button className="">
+          {/* <button className="">
             <img src="./assets/dark_button.png" alt="" />
           </button>
           <button
@@ -36,12 +36,12 @@ const Header = () => {
             onClick={toggleDarkMode}
           >
             {darkMode ? "Light" : "Dark"}
-          </button>
+          </button> */}
         </ul>
       </div>
 
       <div className="header-btn">
-        <button className="px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full">
+        <button className="px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full hover:bg-[#04ABE2]">
           Schedule a Meeting
         </button>
       </div>

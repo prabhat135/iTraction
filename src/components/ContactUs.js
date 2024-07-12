@@ -22,23 +22,7 @@ const ContactUs = () => {
             Our experts are available to discuss your requirements and <br />to become
             your tech partner
           </p>
-          {/* <form>
-              <div className="form-group flex flex-col justify-center p-5 text-white">
-              <label className="text-2xl block mb-1 text-left " htmlFor="name">Name</label>
-              <input className="w-[100%] p-3 border-b-white bg-black " type="text" id="name" name="name" />
-            </div>
-            <div className="form-group flex flex-col justify-center p-5 text-white">
-              <label className="text-2xl block mb-1 text-left " htmlFor="email">Email Id</label>
-              <input className="w-[100%] p-3 border-b-white bg-black " type="email" id="email" name="email" />
-            </div>
-            <div className="form-group flex flex-col justify-center p-5 text-white">
-              <label className="text-2xl block mb-1 text-left " htmlFor="message">Message</label>
-              <textarea className="w-[100%] p-3 border-b-white bg-black " id="message" name="message"></textarea>
-            </div>
-            <button id="submit" type="submit">
-              Submit
-            </button>
-          </form> */}
+          
           <form className="pt-6">
             <div className="py-6">
               <h2 className="text-2xl text-[#FFFFFF]">Name</h2>

@@ -8,10 +8,15 @@ const Service = () => {
           Our
           <span className="text-[#04ABE2]"> services</span>
         </h1>
-        <p className="text-2xl text-[#999999] mt-10">
-          We offer global services, driving <br />growth with expertly designed <br />apps.
-          Let us elevate your business <br />with cost-effective solutions and <br />unlock
-          its full potential.
+        <p className="text-2xl text-[#999999] mt-10 w-[40%]">
+          We craft expertly designed apps that fuel growth and unlock your full
+          potential. Don't just compete locally, reach new markets and customers
+          worldwide. Our global services team understands the intricacies of
+          international expansion, ensuring your app is culturally relevant and
+          technically sound. We don't stop there. We focus on cost-effective
+          solutions, maximizing your return on investment. Let us elevate your
+          business with cutting-edge mobile and web applications, propelling you
+          towards a thriving future in the global marketplace. 
         </p>
       </div>
       <div className="circles relative h-full">

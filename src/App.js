@@ -18,7 +18,7 @@ function App() {
       <Domain />
       <Service />
       <Portfolio />
-      <Laptop />
+      {/* <Laptop /> */}
       {/* <Reviews /> */}
       <ContactUs />
       <Footer />
