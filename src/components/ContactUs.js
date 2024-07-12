@@ -14,8 +14,8 @@ const ContactUs = () => {
       <div className="contactus-content flex w-full text-center sm:text-left sm:w-[50%]">
         <div className="contactus-heading">
           <h1 className="flex flex-wrap text-center sm:text-left text-4xl text-white font-medium mb-8 leading-none">
-            <span className="text-[#04ABE2] pr-0 sm:pr-2">let's </span>
-            have a 
+            <span className="text-[#04ABE2] ">let's </span>
+             have a 
             conversation <span className="text-[#04ABE2] pl-0 sm:pl-2">today!</span>
           </h1>
           <p className="flex flex-wrap text-center sm:text-left text-2xl text-[#999999]">
