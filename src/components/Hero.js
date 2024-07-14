@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./Header";
 
 const Hero = () => {
-  const [darkMode, setdarkMode] = useState(false);
+  // const [darkMode, setdarkMode] = useState(false);
 
   return (
-    <div className={`${darkMode && "dark"}`}>
+    <div className="">
       <div className="hero bg-[#151515] min-h-screen dark:bg-white">
         <div className="bg-gradient-to-br from-[#6C6C6C] to-black  rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
           {/* ____HEADER____ */}
