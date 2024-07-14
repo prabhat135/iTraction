@@ -14,11 +14,11 @@ const Service = () => {
         </p>
       </div>
       <div className="circles relative  flex justify-center items-center w-1/2">
-        <div className="circle circle1 w-24 h-24 rounded-full bg-white absolute  "></div>
-        <div className="circle circle2 w-32 h-32 rounded-full bg-white absolute "></div>
-        <div className="circle circle3 w-20 h-20 rounded-full bg-white absolute "></div>
-        <div className="circle circle4 w-16 h-16 rounded-full bg-white absolute "></div>
-        <div className="circle circle5 w-22 h-22 rounded-full bg-white absolute"></div>
+        <div className="circle circle1 w-24 h-24 rounded-full bg-white absolute top-3 right-[500px]"></div>
+        <div className="circle circle2 w-32 h-32 rounded-full bg-white absolute top-64 right-24"></div>
+        <div className="circle circle3 w-20 h-20 rounded-full bg-white absolute top-80 right-[450px]"></div>
+        <div className="circle circle4 w-16 h-16 rounded-full bg-white absolute top-[588px] right-[800px]"></div>
+        <div className="circle circle5 w-22 h-22 rounded-full bg-white absolute bottom-[130px] right-48"></div>
       </div>
     </div>
   );

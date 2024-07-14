@@ -14,7 +14,7 @@ const Footer = () => {
             <ul class="left-table flex-1 mr-20">
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Blockchain Development"
                   className="hover:text-[#04abe2]"
                 >
@@ -23,7 +23,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Ruby on Rails"
                   className="hover:text-[#04abe2]"
                 >
@@ -32,7 +32,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Amazon Web Services"
                   className="hover:text-[#04abe2]"
                 >
@@ -41,7 +41,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="NodeJS"
                   className="hover:text-[#04abe2]"
                 >
@@ -52,7 +52,7 @@ const Footer = () => {
             <ul class="right-table">
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="eCommerce Development"
                   className="hover:text-[#04abe2]"
                 >
@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Grails"
                   className="hover:text-[#04abe2]"
                 >
@@ -70,7 +70,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Symfony"
                   className="hover:text-[#04abe2]"
                 >
@@ -79,7 +79,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Selenium Automation"
                   className="hover:text-[#04abe2]"
                 >
@@ -96,7 +96,7 @@ const Footer = () => {
             <ul class="left-table flex-1 mr-20">
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="About Us"
                   className="hover:text-[#04abe2]"
                 >
@@ -105,7 +105,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Careers"
                   className="hover:text-[#04abe2]"
                 >
@@ -114,7 +114,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Contact Us"
                   className="hover:text-[#04abe2]"
                 >
@@ -125,7 +125,7 @@ const Footer = () => {
             <ul class="right-table">
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Privacy Policy"
                   className="hover:text-[#04abe2]"
                 >
@@ -134,7 +134,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Term & Conditions"
                   className="hover:text-[#04abe2]"
                 >
@@ -143,7 +143,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   title="Cookies"
                   className="hover:text-[#04abe2]"
                 >
