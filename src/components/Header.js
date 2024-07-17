@@ -59,7 +59,7 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-8 right-0 rounded-[25px] bg-gradient-to-br from-[#6C6C6C] to-black p-4 z-50">
+        <div className="lg:hidden absolute top-8 right-0 rounded-[25px] bg-gradient-to-br from-[#6C6C6C] to-black p-4 z-50 h-[60%]">
           <div onClick={toggleMenu} className=" relative cursor-pointer right-0 w-[2rem] text-white">
             <XMarkIcon />
           </div>
@@ -76,18 +76,18 @@ const Header = () => {
             <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
               Contacts
             </li>
-            <button className="">
-              <img src="./assets/dark_button.png" alt="" />
-            </button>
-            <button
-              className="w-16 h-16 bg-white dark:bg-black rounded-full text-black dark:text-white font-semibold"
-              onClick={toggleDarkMode}
-            >
-              {darkMode ? "Light" : "Dark"}
-            </button>
-            <button className="px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full">
-              Schedule a Meeting
-            </button>
+          {/* <button className="">
+            <img src="./assets/dark_button.png" alt="" />
+          </button>
+          <button
+            className="w-16 h-16 bg-white dark:bg-black rounded-full text-black dark:text-white font-semibold"
+            onClick={toggleDarkMode}
+          >
+            {darkMode ? "Light" : "Dark"}
+      </button> */}
+          <button className="px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full">
+            Schedule a Meeting
+          </button>
           </ul>
         </div>
       )}
