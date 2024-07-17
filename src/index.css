@@ -19,10 +19,40 @@ code {
 
 /* Assuming you are using Tailwind CSS */
 .circle {
-  transition: transform 0.8s ease;
+  transition: transform 0.3s, filter 0.3s;
+  position: relative;
 }
 
 .circle:hover {
-  transform: scale(2.4); /* Scale the circle to 120% on hover */
-  inset: 5; /* Ensure hovered circle is above others */
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+.circle1 {
+  top: 0;
+  left: 0;
+}
+
+.circle2 {
+  top: 0;
+  right: 0;
+}
+
+.circle3 {
+  bottom: 0;
+  left: 0;
+}
+
+.circle4 {
+  bottom: 0;
+  right: 0;
+}
+
+.circle5 {
+  top: 50%;
+  left: 50%;
+}
+
+.circle:hover ~ .circle {
+  filter: blur(5px);
 }

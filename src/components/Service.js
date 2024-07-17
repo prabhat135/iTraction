@@ -1,24 +1,23 @@
-import React from "react";
+import React from 'react';
+import '../css/services.css'
 
 const Service = () => {
   return (
-    <div className="service flex flex-col md:flex-row justify-between items-center sm:p-10 h-screen">
-      <div className="w-1/2">
-        <h1 className="flex flex-wrap text-6xl text-white dark:text-black font-medium sm:mt-8 leading-tight">
-          Our <span className="text-[#04ABE2] sm:pl-2">services</span>
+    <div className="service-container flex flex-col md:flex-row justify-between items-center h-screen p-5 bg-[#151515] text-white w-full">
+      <div className="text-content flex flex-col p-0 sm:p-2  md:p-10 max-w-full md:max-w-2xl mb-5 md:mb-0 text-left md:text-left w-full sm:w-[30%]">
+        <h1 className="text-4xl font-bold">
+          our <span className="text-[#04ABE2]">services</span>
         </h1>
-        <p className="flex flex-wrap text-2xl text-[#999999] mt-10">
-          We offer global services, driving growth with expertly designed apps.
-          Let us elevate your business with cost-effective solutions and unlock
-          its full potential.
+        <p className="mt-4 text-lg">
+          we offer global services, driving growth with expertly designed apps. let us elevate your business with cost-effective solutions and unlock its full potential.
         </p>
       </div>
-      <div className="circles relative  flex justify-center items-center w-1/2">
-        <div className="circle circle1 w-24 h-24 rounded-full bg-white absolute top-3 right-[500px]"></div>
-        <div className="circle circle2 w-32 h-32 rounded-full bg-white absolute top-64 right-24"></div>
-        <div className="circle circle3 w-20 h-20 rounded-full bg-white absolute top-80 right-[450px]"></div>
-        <div className="circle circle4 w-16 h-16 rounded-full bg-white absolute top-[588px] right-[800px]"></div>
-        <div className="circle circle5 w-22 h-22 rounded-full bg-white absolute bottom-[130px] right-48"></div>
+      <div className="relative circles w-[100%] md:w-[70%] h-[100%] ">
+        <div className="circle circle1 bg-[#04ABE2]"></div>
+        <div className="circle circle2 bg-[#04ABE2]"></div>
+        <div className="circle circle3 bg-[#04ABE2]"></div>
+        <div className="circle circle4 bg-[#04ABE2]"></div>
+        <div className="circle circle5 bg-[#04ABE2]"></div>
       </div>
     </div>
   );
