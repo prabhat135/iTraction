@@ -2,16 +2,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer bg-[#232323] rounded-t-[100px] text-white">
-      <div className="footer-container flex justify-around pt-14 pb-10">
-        <div className="footer-logo">
+    <div className="footer  bg-[#232323] rounded-t-[100px] text-white">
+      <div className="footer-container flex flex-col lg:flex-row justify-around pt-14 pb-10">
+        <div className="footer-logo flex justify-center items-center">
           <img src="../assets/itraction_logo_blue.png" alt="" className="cursor-pointer"/>
         </div>
 
-        <div className="footer-services">
+        <div className="footer-services flex flex-col justify-around mx-4">
           <h2 className="font-semibold text-[40px] mb-7 text-center">Services</h2>
-          <div class="service-table flex text-[16px] text-left">
-            <ul class="left-table flex-1 mr-20">
+          <div class="service-table flex flex-wrap  text-[16px] text-left">
+            <ul class="left-table flex-1 mr-8">
               <li className="leading-8">
                 <a
                   href="/"
@@ -90,10 +90,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-links">
+        <div className="footer-links flex flex-col mx-4 ">
           <h2 className="font-semibold text-[40px] mb-7 text-center">Company</h2>
-          <div class="service-table flex text-[16px] text-left">
-            <ul class="left-table flex-1 mr-20">
+          <div class="service-table flex flex-wrap text-[16px] text-left">
+            <ul class="left-table flex-1 mr-8">
               <li className="leading-8">
                 <a
                   href="/"
@@ -155,13 +155,13 @@ const Footer = () => {
         </div>
 
         <div className="footer-contacts flex flex-col justify-center gap-6">
-          <div className="phone flex just bg-white rounded-full pl-1 pr-4 py-1">
+          <div className="phone flex just bg-white rounded-full pl-1 pr-4 py-1 mx-4 mt-4  ">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" />
               <img
                 src="../assets/phone_icon.png"
                 alt=""
-                className="absolute inset-0 m-auto"
+                className="absolute inset-0 m-auto "
               />
             </div>
             <div className="phone-text text-left pl-2 pr-8">
@@ -170,7 +170,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="email flex bg-white rounded-full pl-1 pr-4 py-1">
+          <div className="email flex bg-white rounded-full pl-1 pr-4 py-1 mx-4 mt-4 ">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" />
               <img
