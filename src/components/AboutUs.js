@@ -11,7 +11,7 @@ const AboutUs = () => {
             delivering</span> top- <span className="text-[#04ABE2]">notch service</span>
           </h1>
 
-          <p className=" flex flex-wrap px-10 text-center  md:text-left justify-center items-center text-base text-lg lg:text-xl text-[#999999]">
+          <p className=" flex flex-wrap px-10 text-center  md:text-left justify-center items-center  text-lg lg:text-xl text-[#999999]">
             iTRACTION Technologies provides high-end web and mobile app
             development, leveraging AI-based solutions and over 14 years of
             expertise. Our skilled team ensures powerful, fast applications
