@@ -26,7 +26,7 @@ const Domain = () => {
       </div>
       
 
-      <div className="domain-card flex flex-wrap justify-between gap-4 items-center">
+      <div className="domain-card flex flex-wrap justify-center gap-4 items-center">
         <div className="flex flex-col bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px]">
           <div className="rounded-full bg-white w-20 h-20 relative ">
             <img src="../assets/service1.png" alt="" className="absolute inset-0 m-auto" />
