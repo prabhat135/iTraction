@@ -1,4 +1,5 @@
 import React from "react";
+import '../index.css';
 
 const ContactUs = () => {
   return (
@@ -13,7 +14,7 @@ const ContactUs = () => {
 
       <div className="contactus-content flex w-full text-center sm:text-left sm:w-[50%]">
         <div className="contactus-heading">
-          <h1 className="flex flex-wrap text-center sm:text-left text-4xl text-white font-medium mb-8 leading-none">
+          <h1 className="flex flex-wrap text-center sm:text-left text-6xl text-white font-medium mb-8 leading-none">
             <span className="text-[#04ABE2] pr-0 sm:pr-2">let's </span>
             have a 
             conversation <span className="text-[#04ABE2] pl-0 sm:pl-2">today!</span>
@@ -22,23 +23,7 @@ const ContactUs = () => {
             Our experts are available to discuss your requirements and to become
             your tech partner
           </p>
-          {/* <form>
-              <div className="form-group flex flex-col justify-center p-5 text-white">
-              <label className="text-2xl block mb-1 text-left " htmlFor="name">Name</label>
-              <input className="w-[100%] p-3 border-b-white bg-black " type="text" id="name" name="name" />
-            </div>
-            <div className="form-group flex flex-col justify-center p-5 text-white">
-              <label className="text-2xl block mb-1 text-left " htmlFor="email">Email Id</label>
-              <input className="w-[100%] p-3 border-b-white bg-black " type="email" id="email" name="email" />
-            </div>
-            <div className="form-group flex flex-col justify-center p-5 text-white">
-              <label className="text-2xl block mb-1 text-left " htmlFor="message">Message</label>
-              <textarea className="w-[100%] p-3 border-b-white bg-black " id="message" name="message"></textarea>
-            </div>
-            <button id="submit" type="submit">
-              Submit
-            </button>
-          </form> */}
+          
           <form className="pt-6 mt-4 sm:mt-0 ">
             <div className="py-6">
               <h2 className="text-2xl text-left text-[#FFFFFF]">Name</h2>
@@ -57,7 +42,7 @@ const ContactUs = () => {
             </div>
 
             <div className="flex justify-center pt-10">
-              <button className="bg-transparent border text-white text-2xl px-10 py-2 rounded-full">Submit</button>
+              <button className="submit-btn bg-transparent text-white text-2xl px-10 py-2 rounded-full border hover:border-none"><span>Submit</span></button>
             </div>
           </form>
         </div>

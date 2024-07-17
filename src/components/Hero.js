@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import "../index.css";
 
 const Hero = () => {
   // const [darkMode, setdarkMode] = useState(false);
@@ -15,7 +16,7 @@ const Hero = () => {
           <div className="hero-main flex flex-col lg:flex-row justify-evenly">
             <div className="hero-content w-full lg:w-[45%] py-10 px-6 lg:px-16">
               <div className="">
-                <div className="  text-4xl lg:text-4xl xl:text-5xl text-white dark:text-black font-medium border-b-2 dark:border-b-[#D9D9D9] pb-4 lg:pb-8 mb-4 lg:mb-8 leading-tight">
+                <div className="text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium border-b-2 dark:border-b-[#D9D9D9] pb-4 lg:pb-8 mb-4 lg:mb-8 leading-tight">
                   Web & {" "}
                   <span className="bg-[#04ABE2] display-block rounded-full px-3 py-2  ">
                     Mobile
@@ -25,14 +26,14 @@ const Hero = () => {
                 </div>
               </div>
               <div className="">
-                <p className="text-lg lg:text-xl text-white dark:text-black leading-8 mb-6 lg:mb-10">
+                <p className="text-lg lg:text-xl xl:text-2xl text-white dark:text-black leading-8 mb-6 lg:mb-10">
                   Backed with Latest Technology to Deliver <br className="hidden lg:block" /> Best in Class
                   User Experience.
                 </p>
               </div>
-              <div className="hero-btn">
-                <button className="px-4 py-2 cursor-pointer bg-white text-black dark:border dark:border-black rounded-full text-lg lg:text-xl">
-                  Get Started
+              <div className="">
+                <button className="hero-btn px-4 py-2 cursor-pointer bg-white text-black hover:text-white dark:border dark:border-black rounded-full text-lg lg:text-xl">
+                  <span>Get Started</span>
                 </button>
               </div>
             </div>

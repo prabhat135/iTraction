@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 
 const Portfolio = () => {
   return (
@@ -18,15 +19,15 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="service-card flex flex-wrap justify-center gap-10 pt-10 pb-5">
-        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px]">
+      <div className="service-card flex flex-wrap justify-between gap-10 pt-10 pb-5">
+        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px] hover:border hover:border-[#04ABE2] hover:bg-none">
           <img src="../assets/portfolio.png" alt="" className="w-[250px]" />
           <h2 className="text-3xl font-medium text-white py-9  text-center">
             AllChat- Social Commercial App
           </h2>
 
-          <button className="flex items-center gap-2 bg-white border text-black text-xl px-4 py-2 rounded-full">
-            <h3>view case study</h3>
+          <button className="featured-btn flex items-center gap-2 bg-white text-black text-xl px-4 py-2 rounded-full">
+            <span>view case study</span>
             <img
               src="../assets/arrow_diag.png"
               alt=""
@@ -35,14 +36,14 @@ const Portfolio = () => {
           </button>
         </div>
 
-        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px]">
+        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px] hover:border hover:border-[#04ABE2] hover:bg-none">
           <img src="../assets/portfolio.png" alt="" className="w-[250px]" />
           <h2 className="text-3xl font-medium text-white py-9  text-center">
           freeBeer- An app to explore beer
           </h2>
 
-          <button className="flex items-center gap-2 bg-white border text-black text-xl px-4 py-2 rounded-full">
-            <h3>view case study</h3>
+          <button className="featured-btn flex items-center gap-2 bg-white text-black text-xl px-4 py-2 rounded-full">
+            <span>view case study</span>
             <img
               src="../assets/arrow_diag.png"
               alt=""
@@ -51,14 +52,14 @@ const Portfolio = () => {
           </button>
         </div>
 
-        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px]">
+        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px] hover:border hover:border-[#04ABE2] hover:bg-none">
           <img src="../assets/portfolio.png" alt="" className="w-[250px]" />
           <h2 className="text-3xl font-medium text-white py-9  text-center">
           Audience unlock- online audience development
           </h2>
 
-          <button className="flex items-center gap-2 bg-white border text-black text-xl px-4 py-2 rounded-full">
-            <h3>view case study</h3>
+          <button className="featured-btn flex items-center gap-2 bg-white text-black text-xl px-4 py-2 rounded-full">
+            <span>view case study</span>
             <img
               src="../assets/arrow_diag.png"
               alt=""
@@ -67,14 +68,14 @@ const Portfolio = () => {
           </button>
         </div>
 
-        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px]">
+        <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px] hover:border hover:border-[#04ABE2] hover:bg-none">
           <img src="../assets/portfolio.png" alt="" className="w-[250px]" />
           <h2 className="text-3xl font-medium text-white py-9  text-center">
             AllChat- Social Commercial App
           </h2>
 
-          <button className="flex items-center gap-2 bg-white border text-black text-xl px-4 py-2 rounded-full">
-            <h3>view case study</h3>
+          <button className="featured-btn flex items-center gap-2 bg-white text-black text-xl px-4 py-2 rounded-full">
+            <span>view case study</span>
             <img
               src="../assets/arrow_diag.png"
               alt=""

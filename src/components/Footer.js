@@ -1,4 +1,5 @@
 import React from "react";
+import '../index.css';
 
 const Footer = () => {
   return (
@@ -8,9 +9,9 @@ const Footer = () => {
           <img src="../assets/itraction_logo_blue.png" alt="" className="cursor-pointer"/>
         </div>
 
-        <div className="footer-services flex flex-col justify-around mx-4">
+        <div className="footer-services justify-around mx-4">
           <h2 className="font-semibold text-[40px] mb-7 text-center">Services</h2>
-          <div class="service-table flex flex-wrap  text-[16px] text-left">
+          <div class="service-table flex flex-wrap text-[16px] text-left">
             <ul class="left-table flex-1 mr-8">
               <li className="leading-8">
                 <a
@@ -154,34 +155,28 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-contacts flex flex-col justify-center gap-6">
-          <div className="phone flex just bg-white rounded-full pl-1 pr-4 py-1 mx-4 mt-4  ">
+        <div className="footer-contacts flex md:flex-col justify-center gap-6">
+          <div className="phone flex just bg-white rounded-full pl-1 pr-4 py-1">
             <div className="relative">
-              <img src="../assets/blue_circle.png" alt="" />
-              <img
-                src="../assets/phone_icon.png"
-                alt=""
-                className="absolute inset-0 m-auto "
-              />
+              <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
+              <img src="../assets/phone_icon.png" alt="" className="absolute inset-0 m-auto contact-icon" />
+              {/* <img src="../assets/phone_icon_hover.png" alt="" className="absolute inset-0 m-auto contact-icon-hover" /> */}
             </div>
             <div className="phone-text text-left pl-2 pr-8">
-              <p className="text-md font-medium text-black">PHONE</p>
+              <p className="text-md font-medium text-black hover:text-white">PHONE</p>
               <span className="text-sm text-[#777777]">91-8302378068</span>
             </div>
           </div>
 
-          <div className="email flex bg-white rounded-full pl-1 pr-4 py-1 mx-4 mt-4 ">
+          <div className="email flex bg-white rounded-full pl-1 pr-4 py-1">
             <div className="relative">
-              <img src="../assets/blue_circle.png" alt="" />
-              <img
-                src="../assets/email_icon.png"
-                alt=""
-                className="absolute inset-0 m-auto"
-              />
+              <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
+              <img src="../assets/email_icon.png" alt="" className="absolute inset-0 m-auto contact-icon" />
+              {/* <img src="../assets/email_icon_hover.png" alt="" className="absolute inset-0 m-auto contact-icon-hover" /> */}
             </div>
             <div className="email-text text-left pl-2 pr-8">
-              <p className="text-md font-medium text-black ">EMAIL</p>
-              <span className="text-sm text-[#777777]">sales@traction.com</span>
+              <p className="text-md font-medium">EMAIL</p>
+              <span className="text-sm">sales@traction.com</span>
             </div>
           </div>
         </div>
