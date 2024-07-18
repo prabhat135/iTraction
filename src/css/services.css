@@ -9,7 +9,6 @@
   color: #fff;
 }
 
-
 .text-content h1 {
   font-size: 2.5rem;
 }
@@ -76,47 +75,117 @@
 
 /* Hover effects for each circle */
 .circle1:hover {
-  transform: scale(2.5);
+  transform: scale(2.6);
   transform-origin: top left;
   z-index: 10;
+  transition-delay: 0.2s;
 }
-.circle1:hover ~ .circle:not(.circle1) {
-  filter: blur(5px);
+.circle1:hover ~ .circle.circle2 {
+  transform: translate(-90px, -20px);
+  transition-delay: 0.2s;
+}
+.circle1:hover ~ .circle.circle3 {
+  transform: translate(-45px, 20px);
+  transition-delay: 0.2s;
+}
+.circle1:hover ~ .circle.circle4 {
+  transform: translate(-90px, 20px);
+  transition-delay: 0.2s;
+}
+.circle1:hover ~ .circle.circle5 {
+  transform: translate(80px, 180px);
+  transition-delay: 0.2s;
 }
 
 .circle2:hover {
+  transform: scale(3.8);
   transform-origin: top right;
-  transform: scale(3.5);
   z-index: 10;
+  transition-delay: 0.2s;
 }
-.circle2:hover ~ .circle:not(.circle2) {
-  filter: blur(5px);
+.circle2:hover ~ .circle.circle1 {
+  transform: translate(-50px, 0);
+  transition-delay: 0.2s;
+}
+.circle2:hover ~ .circle.circle3 {
+  transform: translate(300px, 80px);
+  transition-delay: 0.2s;
+}
+.circle2:hover ~ .circle.circle4 {
+  transform: translate(-10px, 190px);
+  transition-delay: 0.2s;
+}
+.circle2:hover ~ .circle.circle5 {
+  transform: translate(-210px, -20px);
+  transition-delay: 0.2s;
 }
 
 .circle3:hover {
-  transform-origin: bottom left;
   transform: scale(3.5);
+  transform-origin: bottom left;
   z-index: 10;
+  transition-delay: 0.2s;
 }
-.circle3:hover ~ .circle:not(.circle3) {
-  filter: blur(5px);
+.circle3:hover ~ .circle.circle1 {
+  transform: translate(0, -50px);
+  transition-delay: 0.2s;
+}
+.circle3:hover ~ .circle.circle2 {
+  transform: translate(50px, 0);
+  transition-delay: 0.2s;
+}
+.circle3:hover ~ .circle.circle4 {
+  transform: translate(-50px, 0);
+  transition-delay: 0.2s;
+}
+.circle3:hover ~ .circle.circle5 {
+  transform: translate(0, 50px);
+  transition-delay: 0.2s;
 }
 
 .circle4:hover {
   transform: scale(2.5);
   transform-origin: bottom right;
   z-index: 10;
+  transition-delay: 0.2s;
 }
-.circle4:hover ~ .circle:not(.circle4) {
-  filter: blur(5px);
+.circle4:hover ~ .circle.circle1 {
+  transform: translate(0, 50px);
+  transition-delay: 0.2s;
+}
+.circle4:hover ~ .circle.circle2 {
+  transform: translate(-50px, 0);
+  transition-delay: 0.2s;
+}
+.circle4:hover ~ .circle.circle3 {
+  transform: translate(50px, 0);
+  transition-delay: 0.2s;
+}
+.circle4:hover ~ .circle.circle5 {
+  transform: translate(0, -50px);
+  transition-delay: 0.2s;
 }
 
 .circle5:hover {
-  transform: scale(1.5);
+  transform: scale(1.8);
   z-index: 10;
+  transition-delay: 0.2s;
 }
-.circle5:hover ~ .circle:not(.circle5) {
-  filter: blur(5px);
+.circle5:hover ~ .circle.circle1 {
+  transform: translate(50px, 120px);
+  transition-delay: 0.2s;
+}
+.circle5:hover ~ .circle.circle2 {
+  transform: translate(0, 50px);
+  transition-delay: 0.2s;
+}
+.circle5:hover ~ .circle.circle3 {
+  transform: translate(0, -50px);
+  transition-delay: 0.2s;
+}
+.circle5:hover ~ .circle.circle4 {
+  transform: translate(-50px, 0);
+  transition-delay: 0.2s;
 }
 
 @media (max-width: 768px) {
