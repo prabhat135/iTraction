@@ -1,55 +1,56 @@
 .circles {
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .circle {
-    background-color: #04ABE2;
-    border-radius: 50%;
-    transition: transform 0.3s, filter 0.3s, bottom 0.2s, left 0.2s,top 0.2s, right 0.2s;
-    position: absolute;
-    transform-origin: center center;
-  }
-  
-  .circle1 {
-    width: 150px;
-    height: 150px;
-    top: 15%;
-    left: 15%;
-  }
-  
-  .circle2 {
-    width: 90px;
-    height: 90px;
-    top: 20%;
-    right: 15%;
-  }
-  
-  .circle3 {
-    width: 100px;
-    height: 100px;
-    bottom: 20%;
-    left: 15%;
-  }
-  
-  .circle4 {
-    width: 120px;
-    height: 120px;
-    bottom: 40%;
-    right: 10%;
-  }
-  
-  .circle5 {
-    width: 230px;
-    height: 230px;
-    top: 40%;
-    left: 40%;
-  }
-  
-  /* .circle.hovered {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  background-color: #04abe2;
+  border-radius: 50%;
+  transition: transform 0.3s, filter 0.3s, bottom 0.2s, left 0.2s, top 0.2s,
+    right 0.2s;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.circle1 {
+  width: 150px;
+  height: 150px;
+  top: 15%;
+  left: 15%;
+}
+
+.circle2 {
+  width: 90px;
+  height: 90px;
+  top: 20%;
+  right: 15%;
+}
+
+.circle3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 15%;
+}
+
+.circle4 {
+  width: 120px;
+  height: 120px;
+  bottom: 40%;
+  right: 10%;
+}
+
+.circle5 {
+  width: 230px;
+  height: 230px;
+  top: 40%;
+  left: 40%;
+}
+
+/* .circle.hovered {
     transform: scale(2.5);
     transform-origin: top left;
     z-index: 10;
@@ -60,7 +61,6 @@
 .circle.shift {
   filter: blur(5px);
   transition-delay: 0.2s;
-  
 }
 
 .circle1.shift {
@@ -88,8 +88,8 @@
   transition: all;
   transition-delay: 0.2s;
 }
-  
-  /* Hover effects for circle1 */
+
+/* Hover effects for circle1 */
 .circle1:hover {
   transform: scale(2.6);
   transform-origin: top left;
@@ -152,7 +152,6 @@
   transition-delay: 0.2s;
 }
 
-
 .circle4:hover {
   transform: scale(2.7);
   transform-origin: bottom right;
@@ -167,8 +166,6 @@
   width: 140px;
   height: 140px;
 }
-
-
 
 .circle5:hover {
   transition-delay: 0.2s;
