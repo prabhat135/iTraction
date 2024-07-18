@@ -1,4 +1,5 @@
 import React from "react";
+import ExpandCards from "./ExpandCards";
 
 const Domain = () => {
   return (
@@ -26,55 +27,17 @@ const Domain = () => {
       </div>
       
 
-      <div className="domain-card flex flex-wrap justify-center gap-4 items-center">
-        <div className="flex flex-col bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px]">
-          <div className="rounded-full bg-white w-20 h-20 relative ">
-            <img src="../assets/service1.png" alt="" className="absolute inset-0 m-auto" />
-          </div>
-          <h2 className="flex flex-wrap text-3xl font-bold text-white py-4 ">App and Web development</h2>
-          <p className="flex flex-wrap text-md text-white pb-6">
-            Transform your ideas into reality with our cutting-edge web and app
-            development services.
-          </p>
-        </div>
-        <div className=" flex flex-col bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-lg p-8 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px]">
-          <div className="rounded-full bg-white w-20 h-20 relative">
-            <img src="../assets/service2.png" alt="" className="absolute inset-0 m-auto" />
-          </div>
-          <h2 className="flex flex-wrap text-3xl font-bold text-white py-4">Chatbot and Voicebot development</h2>
-          <p className="flex flex-wrap text-md text-white">
-          Connect with your customers in real-time and make the
-           most out of the 
-          situation with our custom-built bots.
-          </p>
-        </div>
-        <div className="flex flex-col bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-lg p-8 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px]">
-          <div className="rounded-full bg-white w-20 h-20 relative">
-            <img src="../assets/service3.png" alt="" className="absolute inset-0 m-auto" />
-          </div>
-          <h2 className="flex flex-wrap text-3xl font-bold text-white py-4">Smart IOT solutions</h2>
-          <p className="flex flex-wrap text-md text-white">
-          With IoT power, automate your crucial workflow and improve your productivity.
-          </p>
-        </div>
-        <div className="flex flex-col bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-lg p-8 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px]">
-          <div className="rounded-full bg-white w-20 h-20 relative">
-            <img src="../assets/service4.png" alt="" className="absolute inset-0 m-auto" />
-          </div>
-          <h2 className="flex flex-wrap text-3xl font-bold text-white py-4">Software Testing</h2>
-          <p className="flex flex-wrap text-md text-white">
-          Ensure flawless performance with our new, cutting-edge software testing feature.
-          </p>
-        </div>
+      <div className="w-full h-full flex items-center justify-center">
+       <ExpandCards/>
       </div>
 
 
     
 
-      <div className="flex gap-6 cursor-pointer py-14">
+      {/* <div className="flex gap-6 cursor-pointer py-14">
         <img src="../assets/arrow_left.png" alt="arrow-left" />
         <img src="../assets/arrow_right.png" alt="arrow-right" />
-      </div>
+      </div> */}
       
     </div>
   );
