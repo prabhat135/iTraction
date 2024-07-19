@@ -7,6 +7,8 @@ import ContactUs from "./components/ContactUs";
 import Portfolio from "./components/Portfolio";
 import Service from "./components/Service";
 import Footer from "./components/Footer";
+import Testimonials from "./components/Reviews";
+import AnimatedLogoCloud from "./components/logo-cloude";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Domain />
       <Service />
       <Portfolio />
+      {/* <Testimonials/> */}
+      <AnimatedLogoCloud />
       <ContactUs />
       <Footer />
     </div>
