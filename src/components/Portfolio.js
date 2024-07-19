@@ -19,7 +19,7 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="service-card flex flex-wrap justify-between gap-10 pt-10 pb-5">
+      <div className="service-card flex flex-wrap justify-center gap-10 pt-10 pb-5">
         <div className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#30A5FA] rounded-2xl p-8 w-[400px] hover:border hover:border-[#04ABE2] hover:bg-none">
           <img src="../assets/portfolio.png" alt="" className="w-[250px]" />
           <h2 className="text-3xl font-medium text-white py-9  text-center">
