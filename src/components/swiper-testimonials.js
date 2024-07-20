@@ -17,10 +17,10 @@ export default function TestimonialsCarousel() {
     <Swiper
       slidesPerView={5}
       spaceBetween={5}
-      // autoplay={{
-      //   delay: 1500,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 1500,
+        disableOnInteraction: false,
+      }}
       direction={'vertical'}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
