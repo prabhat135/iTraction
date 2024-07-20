@@ -3,21 +3,21 @@ import '../index.css';
 
 const ContactUs = () => {
   return (
-    <div className="contactus flex flex-col sm:flex-row justify-around p-4 sm:p-20 sm:gap-8 dark:bg-white ">
-      <div className="contactus-image w-full mb-10 sm:mb-0  sm:w-[50%]">
+    <div className="contactus flex flex-col-reverse lg:flex-row justify-around p-4 lg:px-20 lg:pb-20 gap-8 dark:bg-white ">
+
+      <div className="contactus-image flex items-center mb-20 sm:mb-0 w-full lg:w-[50%]">
         <img
           src="./assets/contactus.png"
           alt=""
-          className="h-[400px] w-full sm:h-[800px] sm:w-[580px] "
+          className="max-w-md lg:max-w-none h-[450px] md:h-[600px] w-[400px] lg:h-[700px] xl:w-[580px] xl:h-[800px]"
         />
       </div>
 
-      <div className="contactus-content flex w-full text-center sm:text-left sm:w-[50%]">
+      <div className="contactus-content mx-auto flex justify-center sm:text-left lg:w-[50%] px-5 sm:px-10 md:px-20 lg:px-0">
         <div className="contactus-heading">
           <h1 className="text-center sm:text-left text-6xl text-white font-medium mb-8 leading-none">
             <span className="text-[#04ABE2] pr-0 sm:pr-2">let's </span>
-            have a 
-            conversation <span className="text-[#04ABE2] pl-0 sm:pl-2">today!</span>
+            have a conversation <span className="text-[#04ABE2] pl-0 sm:pl-2">today!</span>
           </h1>
           <p className="flex flex-wrap text-center sm:text-left text-2xl text-[#999999]">
             Our experts are available to discuss your requirements and to become
