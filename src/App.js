@@ -18,7 +18,7 @@ function App() {
       <Domain />
       <Service />
       <Portfolio />
-      {/* <Testimonials/> */}
+      <Testimonials/>
       <AnimatedLogoCloud />
       <ContactUs />
       <Footer />
