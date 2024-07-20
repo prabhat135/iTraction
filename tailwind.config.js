@@ -5,14 +5,22 @@ module.exports = {
     "./src/**/*.{html,js}",
     "./components/**/*.{html,js}",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
-        'manrope': ['Manrope', 'sans-serif']
-      }
+        manrope: ["Manrope", "sans-serif"],
+      },
+      keyframes: {
+        "logo-cloud": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - 4rem))" },
+        },
+      },
+      animation: {
+        "logo-cloud": "logo-cloud 30s linear infinite", 
+      },
     },
   },
   plugins: [],
-}
-
+};
