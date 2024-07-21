@@ -6,7 +6,7 @@ const Portfolio = () => {
     <div className="service flex flex-col justify-center items-center p-8">
 
       <div className="service-heading text-center items-center">
-        <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium mt-8 leading-tight">
+        <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium pb-8 leading-tight">
           featured 
           <span className="text-[#04ABE2]"> works</span>
         </h1>
