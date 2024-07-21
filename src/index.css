@@ -16,6 +16,16 @@ code {
     monospace;
 }
 
+.hero-image {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    display: block;
+  }
+}
+
 /* Assuming you are using Tailwind CSS */
 .circle {
   transition: transform 0.3s, filter 0.3s;
