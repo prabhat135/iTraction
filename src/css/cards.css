@@ -57,7 +57,7 @@
     display: none;
   }
   
-  @media (max-width: 700px){
+  @media (max-width: 500px){
     .container {
         height: 100%;
         display: flex;
@@ -70,6 +70,43 @@
       
       .card {
         width: 100%;
+        height: 300px;
+        border-radius: 0.75rem;
+        background-size: cover;
+        background-color: #04abe2;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 1rem;
+        transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+        pointer-events:all;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .card:hover {
+        width: 100%;
+        height: 200px;
+      }
+
+      .container:hover .card:not(:hover) {
+        width: 100%;
+      }
+      
+  }
+
+  @media (max-width: 768px){
+    .container {
+        height: 100%;
+        display: flex;
+        padding: 0 20px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1rem;
+        pointer-events: none;
+      }
+      
+      .card {
+        width: 400px;
         height: 300px;
         border-radius: 0.75rem;
         background-size: cover;

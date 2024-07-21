@@ -5,7 +5,7 @@ import { domainsData } from "../constants/domains";
 const ExpandCards = () => {
   return (
     <div className="wrapper">
-      <div className="container flex flex-col md:flex-row flex-wrap lg:flex-nowrap  space-y-3 md:space-y-0">
+      <div className="container flex flex-col md:flex-row flex-wrap lg:flex-nowrap items-center md:items-stretch space-y-3 md:space-y-0">
         {domainsData.map((item, index) => {
           return (
             <div
