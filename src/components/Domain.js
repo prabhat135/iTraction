@@ -34,7 +34,7 @@ const Domain = () => {
 
     
 
-      <div className="flex gap-6 cursor-pointer py-14 hidden md:block">
+      <div className="flex gap-6 cursor-pointer py-14">
         <img src="../assets/arrow_left.png" alt="arrow-left" />
         <img src="../assets/arrow_right.png" alt="arrow-right" />
       </div>
