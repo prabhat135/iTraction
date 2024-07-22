@@ -15,19 +15,28 @@ const Hero = () => {
           {/* ____HERO MAIN____ */}
           <div className="hero-main flex flex-col lg:flex-row justify-evenly">
             <div className="hero-content w-full lg:w-[45%] py-10 px-6 lg:px-16">
-              <div className="">
-                <div className="text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
+              <div className="text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
+                <div className="flex items-center gap-4 justify-center md:justify-start">
                   Web &{" "}
-                  <span className="bg-[#04ABE2] display-block rounded-full px-3 py-2  ">
-                    Mobile<br />
+                  <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container">
+                    <span className="marquee-text">
+                      Mobile <span class="dot"/>
+                      <br />
+                    </span>
                   </span>
-                  <p className="mt-2 lg:mt-4 text-center lg:text-left">
-                    App Development
-                  </p>
                 </div>
+                <p className="mt-2 lg:mt-4 text-center lg:text-left">
+                  App Development
+                </p>
               </div>
 
-              <div><img src="./assets/line.png" alt="line" className="w-full sm:w-3/4 md:w-[500px] lg:w-full pb-8 lg:pb-10 mx-auto" /></div>
+              <div>
+                <img
+                  src="./assets/line.png"
+                  alt="line"
+                  className="w-full sm:w-3/4 md:w-[500px] lg:w-full pb-8 lg:pb-10 mx-auto"
+                />
+              </div>
 
               <div className="text-center lg:text-left">
                 <p className="text-lg lg:text-xl xl:text-2xl text-white dark:text-black leading-8 mb-6 lg:mb-10 px-0 sm:px-20 md:px-40 lg:px-0">
@@ -161,7 +170,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
