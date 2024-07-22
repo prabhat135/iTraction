@@ -1,7 +1,7 @@
 import React from "react";
 import TestimonialsCarousel from "./swiper-testimonials";
 
-export const  testimonials = [
+export const testimonials = [
   {
     name: "Mehwish",
     role: "CTO",
@@ -66,10 +66,10 @@ const Testimonials = () => {
             src="/colon.svg"
             alt=""
           />
-          <h2 className="font-medium mb-2 text-blue-500 text-4xl sm:text-5xl xl:text-6xl text-center md:text-left">
-            <span className="text-white">what </span> our <br /><span className="text-white">ustomers</span> says
+          <h2 className="font-medium mb-8 text-[#04ABE2] text-4xl sm:text-5xl xl:text-6xl text-center md:text-left">
+            <span className="text-white">what </span> our <br /><span className="text-white">Customers</span> says
           </h2>
-          <p className="mb-8  text-lg lg:text-2xl text-[#999999] text-center md:text-left">
+          <p className="mb-8 text-lg lg:text-2xl text-[#999999] text-center md:text-left">
             real stories, real satisfaction—hear what our happy customers have
             to say!
           </p>
