@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="hero-image pr-0 lg:pr-10 flex justify-center lg:justify-end">
               <img
                 src="../assets/hero_img2.png"
-                className="w-full max-w-xs lg:max-w-md h-auto"
+                className="w-full max-w-xs lg:max-w-[30rem] h-auto"
                 alt="hero"
               />
             </div>
