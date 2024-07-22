@@ -7,9 +7,9 @@ const ContactUs = () => {
 
       <div className="contactus-image flex items-center justify-center lg:justify-normal mb-20 sm:mb-0 w-full lg:w-[50%]">
         <img
-          src="./assets/contactus.png"
+          src="./assets/contactus.gif"
           alt=""
-          className="max-w-md lg:max-w-none h-[450px] md:h-[600px] w-[400px] lg:h-[700px] xl:w-[580px] xl:h-[800px]"
+          className="max-w-md lg:max-w-none h-[450px] md:h-[600px] w-[400px] lg:h-[700px] xl:w-[580px] xl:h-[800px] rounded-3xl"
         />
       </div>
 
