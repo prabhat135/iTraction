@@ -2,6 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { FeaturedWorkContext } from "../contextApi/FeaturedContext"; // Adjust path as needed
 
+// Import background images
+import mobileViewBg from '../assets/smart-Phone.png'; // Adjust the path as needed
+import laptopViewBg from '../assets/laptop-image.png'; // Adjust the path as needed
+
 const Laptop = () => {
   const { selectedWork } = useContext(FeaturedWorkContext);
 
@@ -37,7 +41,7 @@ const Laptop = () => {
       if (selectedWork?.laptopViewImages.length) {
         setCurrentLaptopImageIndex((prevIndex) => (prevIndex + 1) % selectedWork.laptopViewImages.length);
       }
-    }, 3000); // Change image every 3 seconds
+    }, 9000000); // Change image every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [selectedWork?.laptopViewImages.length]);
@@ -51,7 +55,7 @@ const Laptop = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen p-4 md:p-10 bg-gray-900 text-white">
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen p-4 md:p-10 bg-gray-900 text-white">
       {/* Text Section */}
       <div className="md:w-1/3 md:pr-8 mb-6 md:mb-0">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">{selectedWork.title}</h1>
@@ -65,35 +69,30 @@ const Laptop = () => {
       </div>
 
       {/* Images Section */}
-      <div className="flex-1 p-4 md:p-8">
-        {/* Mobile View Images */}
-        <div className="relative mb-12 bg-cover bg-center" style={{ }}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Mobile View Images</h2>
-          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
-            {selectedWork.mobileViewImages.length > 0 && (
-              <animated.img
-                src={selectedWork.mobileViewImages[currentImageIndex]}
-                alt={`mobile-view-${currentImageIndex}`}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={imageSpring}
-              />
-            )}
-          </div>
-        </div>
-
+      <div className="flex flex-col md:flex-row items-center p-4 md:p-8 md:w-2/3 relative">
         {/* Laptop View Images */}
-        <div className="relative bg-cover bg-center" style={{ backgroundImage: `url(${selectedWork.laptopViewBackgroundImage})` }}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Laptop View Images</h2>
-          <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden">
-            {selectedWork.laptopViewImages.length > 0 && (
-              <animated.img
-                src={selectedWork.laptopViewImages[currentLaptopImageIndex]}
-                alt={`laptop-view-${currentLaptopImageIndex}`}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={laptopImageSpring}
-              />
-            )}
-          </div>
+        <div className="relative w-full md:w-auto">
+          <img className="w-full md:w-auto" src={laptopViewBg} alt="laptop background" />
+          {selectedWork.laptopViewImages.length > 0 && (
+            <animated.img
+              src={selectedWork.laptopViewImages[currentLaptopImageIndex]}
+              alt={`laptop-view-${currentLaptopImageIndex}`}
+              className="absolute inset-0 w-[73%] h-[78%] mx-auto mt-12  object-cover"
+              style={laptopImageSpring}
+            />
+          )}
+        </div>
+        {/* Mobile View Images */}
+        <div className="relative w-full  md:w-auto md:absolute md:bottom-16 md:right-8 flex md:flex-none flex-col items-center">
+          <img className="w-24 md:w-auto" src={mobileViewBg} alt="mobile background" />
+          {selectedWork.mobileViewImages.length > 0 && (
+            <animated.img
+              src={selectedWork.mobileViewImages[currentImageIndex]}
+              alt={`mobile-view-${currentImageIndex}`}
+              className="absolute inset-0 w-[40%]  h-[85%] mt-8 rounded-3xl mx-auto object-cover"
+              style={imageSpring}
+            />
+          )}
         </div>
       </div>
     </div>
