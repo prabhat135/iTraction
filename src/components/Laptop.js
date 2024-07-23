@@ -1,31 +1,99 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
+import { FeaturedWorkContext } from "../contextApi/FeaturedContext"; // Adjust path as needed
 
 const Laptop = () => {
+  const { selectedWork } = useContext(FeaturedWorkContext);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentLaptopImageIndex, setCurrentLaptopImageIndex] = useState(0);
+
+  const imageSpring = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    reset: true,
+  });
+
+  const laptopImageSpring = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    reset: true,
+  });
+
+  // Handle mobile view images cycling
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (selectedWork?.mobileViewImages.length) {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % selectedWork.mobileViewImages.length);
+      }
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [selectedWork?.mobileViewImages.length]);
+
+  // Handle laptop view images cycling
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (selectedWork?.laptopViewImages.length) {
+        setCurrentLaptopImageIndex((prevIndex) => (prevIndex + 1) % selectedWork.laptopViewImages.length);
+      }
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [selectedWork?.laptopViewImages.length]);
+
+  if (!selectedWork) return <div>Loading...</div>;
+
+  const handleButtonClick = () => {
+    if (selectedWork.websiteUrl) {
+      window.open(selectedWork.websiteUrl, '_blank');
+    }
+  };
+
   return (
-    <div className="laptop flex flex-row justify-evenly gap-20 items-center min-h-screen p-10">
-      <div className="laptop_content relative">
-        <div className="circle absolute w-7 h-7 rounded-full bg-[#04ABE2] top-[-168px] left-48"></div>
-        <h1 className="text-6xl text-white font-medium leading-tight">
-          <span className="text-[#04ABE2]">All chat</span> social <br />
-          commercial app
-        </h1>
-        <p className="text-2xl text-[#999999] mt-10">
-          We offer global services, driving <br />
-          growth with expertly designed <br />
-          apps. Let us elevate your business <br />
-          with cost-effective solutions and <br />
-          unlock its full potential.
-        </p>
-        <div className="circle absolute w-16 h-16 rounded-full bg-[#04ABE2] -bottom-32 left-48"></div>
-        <div className="circle absolute w-40 h-40 rounded-full bg-[#04ABE2] bottom-[-250px] left-[-160px]"></div>
+    <div className="flex flex-col md:flex-row min-h-screen p-4 md:p-10 bg-gray-900 text-white">
+      {/* Text Section */}
+      <div className="md:w-1/3 md:pr-8 mb-6 md:mb-0">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">{selectedWork.title}</h1>
+        <p className="text-base md:text-lg mb-6">{selectedWork.description}</p>
+        <button
+          onClick={handleButtonClick}
+          className="border-2 border-white hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl"
+        >
+          Visit Project
+        </button>
       </div>
 
-      <div className="laptop_image relative">
-        <div className="circle z-[-1] absolute w-24 h-24 rounded-full bg-[#04ABE2] top-24 left-6"></div>
-        <img src="../assets/laptop.png" alt="" className="w-[1000px]" />
-        <div className="flex gap-12 cursor-pointer pt-14 align-middle">
-          <img src="../assets/arrow_left.png" alt="" />
-          <img src="../assets/arrow_right.png" alt="" />
+      {/* Images Section */}
+      <div className="flex-1 p-4 md:p-8">
+        {/* Mobile View Images */}
+        <div className="relative mb-12 bg-cover bg-center" style={{ }}>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Mobile View Images</h2>
+          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+            {selectedWork.mobileViewImages.length > 0 && (
+              <animated.img
+                src={selectedWork.mobileViewImages[currentImageIndex]}
+                alt={`mobile-view-${currentImageIndex}`}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={imageSpring}
+              />
+            )}
+          </div>
+        </div>
+
+        {/* Laptop View Images */}
+        <div className="relative bg-cover bg-center" style={{ backgroundImage: `url(${selectedWork.laptopViewBackgroundImage})` }}>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Laptop View Images</h2>
+          <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden">
+            {selectedWork.laptopViewImages.length > 0 && (
+              <animated.img
+                src={selectedWork.laptopViewImages[currentLaptopImageIndex]}
+                alt={`laptop-view-${currentLaptopImageIndex}`}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={laptopImageSpring}
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
