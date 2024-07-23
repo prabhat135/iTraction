@@ -36,7 +36,7 @@ const Circles = () => {
   }, []);
 
   return (
-    <div className="relative circles w-[80%] md:w-[90%] h-[100%]">
+    <div className="relative circles w-[80%] md:w-[90%] h-full">
       <div className="circle circle1 bg-[#04ABE2]"><img src="../assets/circle_elearning.png" alt="circle-images" className="" /></div>
       <div className="circle circle2 bg-[#04ABE2]"><img src="../assets/circle_food.png" alt="circle-images" className="" /></div>
       <div className="circle circle3 bg-[#04ABE2]"><img src="../assets/circle_banking.png" alt="circle-images" className="" /></div>
