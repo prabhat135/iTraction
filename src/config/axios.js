@@ -1,7 +1,7 @@
 import axios from 'axios';
 //creating the base url
-const baseURL = 'http://localhost:8080'
-
+//const baseURL = 'http://localhost:8080'
+const baseURL = 'https://itraction-admin.onrender.com'
 // Create an instance of Axios with default configuration
 const axiosInstance = axios.create({
   baseURL: `${baseURL}/api`, // Base URL for all requests
