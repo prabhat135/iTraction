@@ -15,7 +15,7 @@ const Hero = () => {
           {/* ____HERO MAIN____ */}
           <div className="hero-main flex flex-col lg:flex-row justify-evenly">
             <div className="hero-content w-full lg:w-[45%] py-10 px-6 lg:px-16">
-              <div className="text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
+              <div className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
                 <div className="flex items-center gap-4 justify-center md:justify-start">
                   Web &{" "}
                   <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container">
