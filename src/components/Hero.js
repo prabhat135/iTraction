@@ -16,18 +16,17 @@ const Hero = () => {
           <div className="hero-main flex flex-col lg:flex-row justify-evenly">
             <div className="hero-content w-full lg:w-[45%] py-10 px-6 lg:px-16">
               <div className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
-                <div className="flex items-center gap-4 justify-center md:justify-start">
-                  Web &{" "}
-                  <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container">
-                    <span className="marquee-text">
-                      Mobile <span class="dot"/>
-                      <br />
-                    </span>
+                <div className="items-center gap-4 justify-center lg:justify-start">
+                  Enterprise Business<br />
+                  <p className="mt-2 lg:mt-4">with {" "}
+                  <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container w-[170px] md:w-[200px] lg:w-[209px] xl:w-[240px] 2xl:w-[290px]">
+                    <span className="marquee-text">Artificial Intelligence</span>
                   </span>
+                  </p>
                 </div>
-                <p className="mt-2 lg:mt-4 text-center lg:text-left">
+                {/* <p className="mt-2 lg:mt-4 text-center lg:text-left">
                   App Development
-                </p>
+                </p> */}
               </div>
 
               <div>
