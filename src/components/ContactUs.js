@@ -17,7 +17,7 @@ const ContactUs = () => {
         <div className="contactus-heading">
           <h1 className="text-center sm:text-left text-6xl text-white font-medium mb-8 leading-none">
             <span className="text-[#04ABE2] pr-0 sm:pr-2">let's </span>
-            have a conversation <span className="text-[#04ABE2] pl-0 sm:pl-2">today!</span>
+            have a conversation <span className="text-[#04ABE2]">today!</span>
           </h1>
           <p className="flex flex-wrap text-center sm:text-left text-2xl text-[#999999]">
             Our experts are available to discuss your requirements and to become
