@@ -156,26 +156,26 @@ const Footer = () => {
         </div>
 
         <div className="footer-contacts flex lg:flex-col justify-center gap-6 mt-7 lg:mt-0">
-          <div className="phone flex just bg-white rounded-full pl-1 pr-4 py-1">
+          <div className="phone flex just bg-white rounded-full pl-1 pr-4 py-1 text-black hover:text-white cursor-pointer">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
               <img src="../assets/phone_icon.png" alt="" className="absolute inset-0 m-auto contact-icon" />
               {/* <img src="../assets/phone_icon_hover.png" alt="" className="absolute inset-0 m-auto contact-icon-hover" /> */}
             </div>
             <div className="phone-text text-left pl-2 sm:pr-8">
-              <p className="text-md font-medium text-black hover:text-white">PHONE</p>
-              <span className="text-sm text-[#777777]">91-8302378068</span>
+              <p className="text-md font-semibold ">PHONE</p>
+              <span className="text-sm">+91-9547709021</span>
             </div>
           </div>
 
-          <div className="email flex bg-white rounded-full pl-1 pr-4 py-1">
+          <div className="email flex bg-white rounded-full pl-1 pr-4 py-1 text-black hover:text-white cursor-pointer">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
               <img src="../assets/email_icon.png" alt="" className="absolute inset-0 m-auto contact-icon" />
               {/* <img src="../assets/email_icon_hover.png" alt="" className="absolute inset-0 m-auto contact-icon-hover" /> */}
             </div>
             <div className="email-text text-left pl-2 sm:pr-8">
-              <p className="text-md font-medium">EMAIL</p>
+              <p className="text-md font-semibold">EMAIL</p>
               <span className="text-sm">sales@traction.com</span>
             </div>
           </div>
