@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <div className="">
-      <div className="hero bg-[#151515] min-h-screen dark:bg-white">
+      <div className="hero min-h-screen dark:bg-white px-4 pt-12 sm:px-8 sm:pt-8">
         <div className="bg-gradient-to-br from-[#6C6C6C] to-black  rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
           {/* ____HEADER____ */}
           <Header />
@@ -18,8 +18,9 @@ const Hero = () => {
               <div className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
                 <div className="items-center gap-4 justify-center lg:justify-start">
                   Enterprise Business<br />
-                  <p className="mt-2 lg:mt-4">with {" "}
-                  <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container w-[170px] md:w-[200px] lg:w-[209px] xl:w-[240px] 2xl:w-[290px]">
+                  <p className="mt-2 lg:mt-4">
+                    <span>with {" "}</span>
+                  <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container w-[170px] md:w-[200px] lg:w-[209px] xl:w-[240px] 2xl:w-[290px] mb-[-14px] md:mb-[-18px]">
                     <span className="marquee-text">Artificial Intelligence</span>
                   </span>
                   </p>
