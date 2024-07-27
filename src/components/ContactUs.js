@@ -9,7 +9,7 @@ const ContactUs = () => {
         <img
           src="./assets/contactus.gif"
           alt=""
-          className="max-w-md lg:max-w-none h-[450px] md:h-[600px] w-[400px] lg:h-[700px] xl:w-[580px] xl:h-[800px] rounded-3xl"
+          className="max-w-md lg:max-w-none h-[450px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] w-[350px] sm:w-[450px] xl:w-[580px] rounded-3xl"
         />
       </div>
 
