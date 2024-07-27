@@ -37,7 +37,7 @@ const Portfolio = () => {
         {featuredWork.map(work => (
           <div
             key={work._id}
-            className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#20A5FA] rounded-2xl p-8 w-[350px] sm:w-[400px]  hover:border hover:border-[#04ABE2] hover:bg-none"
+            className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#20A5FA] rounded-2xl p-8 w-[350px] sm:w-[400px] lg:w-[33%] xl:w-[22%] hover:border hover:border-[#04ABE2] hover:bg-none"
            
           >
             <img onClick={()=>handleImageClick(work)} src={work.image} alt={work.metadataimage} className="w-[250px] h-[250px] rounded-lg object-hidden" />
