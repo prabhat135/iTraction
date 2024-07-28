@@ -41,7 +41,7 @@ const Laptop = () => {
       if (selectedWork?.laptopViewImages.length) {
         setCurrentLaptopImageIndex((prevIndex) => (prevIndex + 1) % selectedWork.laptopViewImages.length);
       }
-    }, 9000000); // Change image every 3 seconds
+    }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [selectedWork?.laptopViewImages.length]);
@@ -69,27 +69,26 @@ const Laptop = () => {
       </div>
 
       {/* Images Section */}
-      <div className="flex flex-col md:flex-row items-center p-4 md:p-8 md:w-2/3 relative">
+      <div className="flex flex-col md:flex-row items-center p-4 md:p-8 md:w-2/3 relative gap-4 md:gap-2">
         {/* Laptop View Images */}
-        <div className="relative w-full md:w-auto">
-          <img className="w-full md:w-auto" src={laptopViewBg} alt="laptop background" />
+        <div className="flex bg-[#151517] justify-center items-center flex-col relative w-full border-2 border-gray-200 md:w-auto ">
           {selectedWork.laptopViewImages.length > 0 && (
             <animated.img
               src={selectedWork.laptopViewImages[currentLaptopImageIndex]}
               alt={`laptop-view-${currentLaptopImageIndex}`}
-              className="absolute inset-0 w-[73%] h-[78%] mx-auto mt-12  object-cover"
+              className="relative inset-0 p-4 sm:p-8 rounded-lg w-full md:w-[600px] lg:w-[900px] mx-auto object-cover"
               style={laptopImageSpring}
             />
           )}
+          <div className="bg-white rounded-2xl mb-2 p-1 h-[2px] w-24"></div>
         </div>
         {/* Mobile View Images */}
-        <div className="relative w-full  md:w-auto md:absolute md:bottom-16 md:right-8 flex md:flex-none flex-col items-center">
-          <img className="w-24 md:w-auto" src={mobileViewBg} alt="mobile background" />
+        <div className="flex  justify-center items-center flex-col relative w-full rounded-3xl md:w-auto md:h-auto">
           {selectedWork.mobileViewImages.length > 0 && (
             <animated.img
               src={selectedWork.mobileViewImages[currentImageIndex]}
               alt={`mobile-view-${currentImageIndex}`}
-              className="absolute inset-0 w-[40%]  h-[85%] mt-8 rounded-3xl mx-auto object-cover"
+              className="inset-0 rounded-3xl mx-auto w-[150px] sm:w-[200px] h-[300px] sm:h-[400px] border-2 border-gray-200 object-cover"
               style={imageSpring}
             />
           )}

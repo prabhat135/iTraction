@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,10 +9,32 @@ import 'swiper/css/pagination';
 import '../css/carousel.css';
 
 // import required modules
+
 import { Pagination, Autoplay } from 'swiper/modules';
-import { testimonials } from './Reviews';
+import axiosInstance from '../config/axios';
 
 export default function TestimonialsCarousel() {
+  const [testimonials, setTestimonials] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await axiosInstance.get('/testinomials');
+        setTestimonials(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError(err);
+        setLoading(false);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
   return (
     <Swiper
       slidesPerView={5}
