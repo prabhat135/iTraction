@@ -155,7 +155,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-contacts flex lg:flex-col justify-center gap-6 mt-7 lg:mt-0">
+        <div className="footer-contacts flex flex-col xsm:flex-row lg:flex-col justify-center gap-6 mt-7 lg:mt-0">
           <div className="phone flex bg-black rounded-full pl-1 pr-4 py-1 text-white hover:text-black cursor-pointer group transition-colors duration-300">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
