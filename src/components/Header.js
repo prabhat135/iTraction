@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header flex justify-between items-center px-4 lg:px-12 py-4 ">
+    <div className="header flex justify-between items-center px-4 lg:px-12 py-4 z-10">
       <div className="logo w-24 h-24">
         <img src="./assets/main_logo.png" alt="Logo" />
         {/* <img src="./assets/main_logo_white.png" alt="Logo" class="hidden dark:block"/> */}

@@ -91,6 +91,7 @@ code {
   z-index: 0;
   background-color: #04abe2;
   transition: left 0.6s ease;
+  border-radius: 0rem 9999px 9999px 0;
 }
 
 .phone:hover::before,
@@ -100,6 +101,7 @@ code {
 .hero-btn:hover::before,
 .featured-btn:hover::before {
   left: 0;
+  border-radius: 0rem 9999px 9999px 0;
 }
 
 .phone,
@@ -119,48 +121,6 @@ code {
   z-index: 1;
 }
 
-/* ----------------- */
-
-.phone-text > p,
-.email-text > p {
-  color: black;
-}
-.phone-text > span,
-.email-text > span {
-  color: #777777;
-}
-
-.phone:hover,
-.email:hover {
-  color: white;
-}
-
-/* ------- */
-
-/* .phone, .email, .contact-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.5s ease;
-}
-
-.phone, .email, .contact-icon-hover {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.phone:hover, .email:hover, .contact-icon {
-  opacity: 0;
-}
-
-.phone:hover, .email:hover, .contact-icon-hover {
-  opacity: 1;
-} */
 
 @keyframes bubbleUp {
   0% {
@@ -209,11 +169,3 @@ code {
     transform: translateX(-100%);
   }
 }
-/* .dot {
-  height: 20px;
-  width: 20px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  padding: 0.8rem;
-} */

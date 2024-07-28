@@ -3,7 +3,7 @@ import '../index.css';
 
 const Footer = () => {
   return (
-    <div className="footer  bg-[#232323] rounded-t-[100px] text-white">
+    <div className="footer bg-[#232323] rounded-t-[100px] text-white">
       <div className="footer-container flex flex-col lg:flex-row justify-around pt-14 pb-10">
         <div className="footer-logo flex justify-center items-center">
           <img src="../assets/itraction_logo_blue.png" alt="" className="cursor-pointer"/>
@@ -156,26 +156,26 @@ const Footer = () => {
         </div>
 
         <div className="footer-contacts flex lg:flex-col justify-center gap-6 mt-7 lg:mt-0">
-          <div className="phone flex just bg-white rounded-full pl-1 pr-4 py-1">
+          <div className="phone flex bg-black rounded-full pl-1 pr-4 py-1 text-white hover:text-black cursor-pointer group transition-colors duration-300">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
-              <img src="../assets/phone_icon.png" alt="" className="absolute inset-0 m-auto contact-icon" />
-              {/* <img src="../assets/phone_icon_hover.png" alt="" className="absolute inset-0 m-auto contact-icon-hover" /> */}
+              <img src="../assets/phone_icon_black.png" alt="" className="absolute inset-0 m-auto group-hover:opacity-0 transition-opacity duration-300" />
+              <img src="../assets/phone_icon_white.png" alt="" className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <div className="phone-text text-left pl-2 sm:pr-8">
-              <p className="text-md font-medium text-black hover:text-white">PHONE</p>
-              <span className="text-sm text-[#777777]">91-8302378068</span>
+              <p className="text-md font-semibold">PHONE</p>
+              <span className="text-sm">+91-9547709021</span>
             </div>
           </div>
 
-          <div className="email flex bg-white rounded-full pl-1 pr-4 py-1">
+          <div className="email flex bg-black rounded-full pl-1 pr-4 py-1 text-white hover:text-black cursor-pointer group transition-colors duration-300">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
-              <img src="../assets/email_icon.png" alt="" className="absolute inset-0 m-auto contact-icon" />
-              {/* <img src="../assets/email_icon_hover.png" alt="" className="absolute inset-0 m-auto contact-icon-hover" /> */}
+              <img src="../assets/email_icon_black.png" alt="" className="absolute inset-0 m-auto group-hover:opacity-0 transition-opacity duration-300" />
+              <img src="../assets/email_icon_white.png" alt="" className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <div className="email-text text-left pl-2 sm:pr-8">
-              <p className="text-md font-medium">EMAIL</p>
+              <p className="text-md font-semibold">EMAIL</p>
               <span className="text-sm">sales@traction.com</span>
             </div>
           </div>
