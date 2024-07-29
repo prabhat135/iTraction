@@ -3,7 +3,7 @@ import '../index.css';
 
 const ContactUs = () => {
   return (
-    <div className="contactus flex flex-col-reverse lg:flex-row justify-around p-4 lg:px-20 lg:pb-20 gap-8 dark:bg-white ">
+    <div className="contactus flex flex-col-reverse lg:flex-row justify-around sm:p-4 lg:px-20 lg:pb-20 gap-8 dark:bg-white ">
 
       <div className="contactus-image flex items-center justify-center lg:justify-normal mb-20 sm:mb-0 w-full lg:w-[50%]">
         <img
@@ -15,11 +15,11 @@ const ContactUs = () => {
 
       <div className="contactus-content mx-auto flex justify-center sm:text-left lg:w-[50%] px-5 sm:px-10 md:px-20 lg:px-0">
         <div className="contactus-heading">
-          <h1 className="text-center sm:text-left text-6xl text-white font-medium mb-8 leading-none">
+          <h1 className="text-center sm:text-left text-4xl sm:text-5xl xl:text-6xl text-white font-medium mb-8 leading-none">
             <span className="text-[#04ABE2] pr-0 sm:pr-2">let's </span>
             have a conversation <span className="text-[#04ABE2]">today!</span>
           </h1>
-          <p className="flex flex-wrap text-center sm:text-left text-2xl text-[#999999]">
+          <p className="flex flex-wrap text-center sm:text-left text-lg md:text-xl lg:text-2xl text-[#999999]">
             Our experts are available to discuss your requirements and to become
             your tech partner
           </p>
