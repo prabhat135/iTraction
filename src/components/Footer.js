@@ -155,26 +155,26 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-contacts flex lg:flex-col justify-center gap-6 mt-7 lg:mt-0">
-          <div className="phone flex bg-black rounded-full pl-1 pr-4 py-1 text-white hover:text-black cursor-pointer group transition-colors duration-300">
+        <div className="footer-contacts flex flex-col xsm:flex-row lg:flex-col items-center xsm:items-stretch justify-center gap-6 mt-7 lg:mt-0">
+          <div className="phone flex items-center w-[200px] xsm:w-auto bg-black rounded-full pl-1 pr-4 py-1 text-white hover:text-black cursor-pointer group transition-colors duration-300">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
               <img src="../assets/phone_icon_black.png" alt="" className="absolute inset-0 m-auto group-hover:opacity-0 transition-opacity duration-300" />
               <img src="../assets/phone_icon_white.png" alt="" className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div className="phone-text text-left pl-2 sm:pr-8">
+            <div className="phone-text text-left pl-2 sm:pr-8 lg:pr-0 xl:pr-8">
               <p className="text-md font-semibold">PHONE</p>
               <span className="text-sm">+91-9547709021</span>
             </div>
           </div>
 
-          <div className="email flex bg-black rounded-full pl-1 pr-4 py-1 text-white hover:text-black cursor-pointer group transition-colors duration-300">
+          <div className="email flex items-center w-[200px] xsm:w-auto bg-black rounded-full pl-1 pr-4 py-1 text-white hover:text-black cursor-pointer group transition-colors duration-300">
             <div className="relative">
               <img src="../assets/blue_circle.png" alt="" className="contact-icon" />
               <img src="../assets/email_icon_black.png" alt="" className="absolute inset-0 m-auto group-hover:opacity-0 transition-opacity duration-300" />
               <img src="../assets/email_icon_white.png" alt="" className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div className="email-text text-left pl-2 sm:pr-8">
+            <div className="email-text text-left pl-2 sm:pr-8 lg:pr-0 xl:pr-8">
               <p className="text-md font-semibold">EMAIL</p>
               <span className="text-sm">sales@traction.com</span>
             </div>

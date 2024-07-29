@@ -20,6 +20,9 @@ module.exports = {
       animation: {
         "logo-cloud": "logo-cloud 30s linear infinite", 
       },
+      screens: {
+        'xsm': '410px',
+      },
     },
   },
   plugins: [],
