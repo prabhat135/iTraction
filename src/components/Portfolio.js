@@ -8,9 +8,11 @@ const Portfolio = () => {
   const navigate = useNavigate('');
   const handleImageClick = (work) => {
     setSelectedWork(work);
-   
+    if (work.imageType === "laptopMobileView") {
+      navigate('/mobile-features');
+    } else {
       navigate('/brand-features');
-    
+    }
   };
 
   if (error) return <div>Error: {error.message}</div>;

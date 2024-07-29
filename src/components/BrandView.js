@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { FeaturedWorkContext } from "../contextApi/FeaturedContext"; // Adjust path as needed
-import '../css/brandview.css';
-
+import '../css/brandview.css'
 const BrandImages = () => {
   const { selectedWork } = useContext(FeaturedWorkContext);
 
@@ -36,7 +35,7 @@ const BrandImages = () => {
   return (
     <div className="relative flex flex-col md:flex-row items-center min-h-screen justify-between p-4 md:p-10 bg-gray-900 text-white">
       {/* Circles in Background */}
-      <div className="absolute inset-0 z-2 flex justify-center items-center">
+      <div className="absolute inset-0 z-10">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
         <div className="circle circle-3"></div>
@@ -44,29 +43,29 @@ const BrandImages = () => {
         <div className="circle circle-5"></div>
       </div>
 
-      {/* Content Section */}
-      <div className="flex flex-col md:w-1/2 md:pr-10 mb-6 md:mb-0">
+      {/* Description Section */}
+      <div className="flex flex-col flex-wrap w-full md:w-1/3 md:pr-10 mb-6 md:mb-0">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">{selectedWork.title}</h1>
         <p className="text-base md:text-lg mb-6">{selectedWork.description}</p>
         <button
           onClick={handleButtonClick}
-          className="border-2 border-white hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl w-1/2 md:w-1/3"
+          className="border-2 border-white hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl w-1/3"
         >
           Visit Project
         </button>
       </div>
 
       {/* Brand Images */}
-      {selectedWork.brandImages.length > 0 && (
-        <div className="flex justify-center items-center md:w-1/2 relative">
+      <div className="relative bg-gray-200 shadow-2xl w-full md:w-[800px] h-[400px] md:h-[500px] overflow-hidden rounded-lg">
+        {selectedWork.brandImages.length > 0 && (
           <animated.img
             src={selectedWork.brandImages[currentBrandImageIndex]}
             alt={`brand-view-${currentBrandImageIndex}`}
-            className="w-full max-w-[900px] object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
             style={brandImageSpring}
           />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
