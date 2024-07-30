@@ -2,6 +2,39 @@ import React from "react";
 import Header from "./Header";
 import "../index.css";
 
+const statsData = [
+  {
+    image: "./assets/vector1.png",
+    number: "50+",
+    text: "Top Developers",
+  },
+  {
+    image: "./assets/vector2.png",
+    number: "100+",
+    text: "Projects Completed",
+  },
+  {
+    image: "./assets/vector3.png",
+    number: "50+",
+    text: "Applications Delivered",
+  },
+  {
+    image: "./assets/vector4.png",
+    number: "96%",
+    text: "Projects Success",
+  },
+  {
+    image: "./assets/vector5.png",
+    number: "100+",
+    text: "Enterprise Customers",
+  },
+  {
+    image: "./assets/vector6.png",
+    number: "4.7",
+    text: "Star rating by 100+ Enterprise Customers",
+  },
+];
+
 const Hero = () => {
   // const [darkMode, setdarkMode] = useState(false);
 
@@ -14,15 +47,18 @@ const Hero = () => {
 
           {/* ____HERO MAIN____ */}
           <div className="hero-main flex flex-col lg:flex-row justify-evenly">
-            <div className="hero-content w-full lg:w-[45%] py-10 px-6 lg:px-16">
+            <div className="hero-content w-full lg:w-[48%] xl:w-[46%] py-10 px-6 lg:px-16">
               <div className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
                 <div className="items-center gap-4 justify-center lg:justify-start">
-                  Enterprise Business<br />
+                  Enterprise Business
+                  <br />
                   <p className="mt-2 lg:mt-4">
-                    <span>with {" "}</span>
-                  <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container w-[170px] md:w-[200px] lg:w-[209px] xl:w-[240px] 2xl:w-[290px] mb-[-14px] md:mb-[-18px]">
-                    <span className="marquee-text">Artificial Intelligence</span>
-                  </span>
+                    <span>with </span>
+                    <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container w-[170px] md:w-[200px] lg:w-[209px] xl:w-[240px] 2xl:w-[290px] mb-[-14px] md:mb-[-18px]">
+                      <span className="marquee-text">
+                        Artificial Intelligence
+                      </span>
+                    </span>
                   </p>
                 </div>
                 {/* <p className="mt-2 lg:mt-4 text-center lg:text-left">
@@ -54,7 +90,7 @@ const Hero = () => {
             <div className="hero-image pr-0 lg:pr-10 flex justify-center lg:justify-end">
               <img
                 src="../assets/hero_img2.png"
-                className="w-full max-w-xs lg:max-w-[30rem] h-auto"
+                className="w-full max-w-xs lg:max-w-[30rem] h-auto 2xl:pt-[7px]"
                 alt="hero"
               />
             </div>
@@ -62,115 +98,32 @@ const Hero = () => {
         </div>
 
         {/* ____STATS____ */}
-        <div className="stats flex flex-wrap justify-around pt-10 lg:pt-20">
-          <div className="m-4 lg:m-0 group relative w-36">
-            <div className="group-hover:scale-125 transform transition-transform duration-150">
-              <img
-                src="./assets/vector1.png"
-                alt=""
-                className="w-[60px] lg:w-[90px] h-[65px] lg:h-[95px] mx-auto"
-              />
-              <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
-                50+
-              </h3>
-              <div className="absolute left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                <p className="text-white dark:text-black text-sm pt-2 font-medium">
-                  Top Developers
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div className="dark:shadow-lg m-4 lg:m-0 group relative w-36">
-            <div className="group-hover:scale-125 transform transition-transform duration-150">
-              <img
-                src="./assets/vector2.png"
-                alt=""
-                className="w-[60px] lg:w-[90px] h-[65px] lg:h-[95px] mx-auto"
-              />
-              <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
-                100+
-              </h3>
-              <div className="absolute left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                <p className="text-white dark:text-black text-sm pt-2 font-medium">
-                  Projects Completed
-                </p>
+        <div className="flex flex-wrap justify-evenly pt-20 xl:pb-10 2xl:pb-0">
+          {statsData.map((item, index) => (
+            <div
+              key={index}
+              className="m-4 md:m-12 lg:m-0 group relative w-28 xsm:w-36"
+            >
+              <div className="md:group-hover:scale-110 transform transition-transform duration-150">
+                <img
+                  src={item.image}
+                  alt=""
+                  className="h-[65px] lg:h-[95px] mx-auto"
+                />
+                <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
+                  {item.number}
+                </h3>
+                <div className="absolute left-0 right-0 text-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-600">
+                  <p className="text-white dark:text-black text-md pt-2 font-medium">
+                    {item.text}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="dark:shadow-lg m-4 lg:m-0 group relative w-36">
-            <div className="group-hover:scale-125 transform transition-transform duration-150">
-              <img
-                src="./assets/vector3.png"
-                alt=""
-                className="w-[60px] lg:w-auto h-[65px] lg:h-[95px] mx-auto"
-              />
-              <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
-                50+
-              </h3>
-              <div className="absolute left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                <p className="text-white dark:text-black text-sm pt-2 font-medium">
-                  Applications Delivered
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="dark:shadow-lg m-4 lg:m-0 group relative w-36">
-            <div className="group-hover:scale-125 transform transition-transform duration-150">
-              <img
-                src="./assets/vector4.png"
-                alt=""
-                className="w-[60px] lg:w-[90px] h-[65px] lg:h-[95px] mx-auto"
-              />
-              <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
-                96%
-              </h3>
-              <div className="absolute left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                <p className="text-white dark:text-black text-sm pt-2 font-medium">
-                  Projects Success
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="dark:shadow-lg m-4 lg:m-0 group relative w-36">
-            <div className="group-hover:scale-125 transform transition-transform duration-150">
-              <img
-                src="./assets/vector5.png"
-                alt=""
-                className="w-[60px] lg:w-[90px] h-[65px] lg:h-[95px] mx-auto"
-              />
-              <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
-                100+
-              </h3>
-              <div className="absolute left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                <p className="text-white dark:text-black text-sm pt-2 font-medium">
-                  Enterprise Customers
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="dark:shadow-lg m-4 lg:m-0 group relative w-36">
-            <div className="group-hover:scale-125 transform transition-transform duration-150">
-              <img
-                src="./assets/vector6.png"
-                alt=""
-                className="w-[60px] lg:w-[90px] h-[65px] lg:h-[95px] mx-auto"
-              />
-              <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
-                4.7
-              </h3>
-              <div className="absolute left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                <p className="text-white dark:text-black text-sm pt-2 font-medium">
-                  Star rating by 100+ Enterprise Customers
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
+
       </div>
     </div>
   );
