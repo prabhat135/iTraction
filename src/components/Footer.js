@@ -184,6 +184,7 @@ const Footer = () => {
 
       <div>
         <div className="copyright pb-2 text-center">
+          <span className="font-bold">A Venture of Adiray</span> <br />
           © 2024 <span className="text-[#04abe2]">Traction.</span> All Rights
           Reserved.
         </div>
