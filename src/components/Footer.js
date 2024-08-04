@@ -184,7 +184,7 @@ const Footer = () => {
 
       <div>
         <div className="copyright pb-2 text-center">
-          <span className="font-bold">A Venture of Adiray</span> <br />
+          <span className="font-bold">A Venture of <a href="https://www.adirayglobal.com/" target="_blank" rel="noreferrer">Adiray</a></span> <br />
           © 2024 <span className="text-[#04abe2]">Traction.</span> All Rights
           Reserved.
         </div>
