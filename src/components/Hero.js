@@ -40,7 +40,7 @@ const Hero = () => {
 
   return (
     <div className="">
-      <div className="hero min-h-screen dark:bg-white px-4 pt-12 sm:px-8 sm:pt-8">
+      <div className="hero min-h-screen dark:bg-white px-4 pt-4 sm:px-8 sm:pt-8">
         <div className="bg-gradient-to-br from-[#6C6C6C] to-black  rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
           {/* ____HEADER____ */}
           <Header />
@@ -99,7 +99,7 @@ const Hero = () => {
 
         {/* ____STATS____ */}
 
-        <div className="flex flex-wrap justify-evenly pt-20 xl:pb-10 2xl:pb-0">
+        <div className="flex flex-wrap justify-evenly pt-12 lg:pt-20 xl:pb-10 2xl:pb-0">
           {statsData.map((item, index) => (
             <div
               key={index}
