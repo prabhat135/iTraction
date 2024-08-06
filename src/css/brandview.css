@@ -1,42 +1,42 @@
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    background-color: #00bfff; /* blue color */
-    opacity: 0.7;
-  }
-  
-  .circle-1 {
-    width: 30px;
-    height: 30px;
-    top: 10%;
-    left: 15%;
-  }
-  
-  .circle-2 {
-    width: 80px;
-    height: 80px;
-    top: 20%;
-    left: 20%;
-  }
-  
-  .circle-3 {
-    width: 60px;
-    height: 60px;
-    top: 60%;
-    left: 18%;
-  }
-  
-  .circle-4 {
-    width: 120px;
-    height: 120px;
-    top: 70%;
-    left: 2%;
-  }
-  
-  .circle-5 {
-    width: 15px;
-    height: 15px;
-    top: 82%;
-    left: 23%;
-  }
-  
+.brandview-circle,
+.laptop-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #00bfff; /* blue color */
+  opacity: 0.7;
+}
+
+.circle-1 {
+  width: 30px;
+  height: 30px;
+  top: 09%;
+  left: 17%;
+}
+
+.circle-2 {
+  width: 80px;
+  height: 80px;
+  top: 14%;
+  left: 30%;
+}
+
+.circle-3 {
+  width: 60px;
+  height: 60px;
+  top: 71%;
+  left: 22%;
+}
+
+.circle-4 {
+  width: 120px;
+  height: 120px;
+  top: 80%;
+  left: 05%;
+}
+
+.circle-5 {
+  width: 15px;
+  height: 15px;
+  top: 88%;
+  left: 30%;
+}

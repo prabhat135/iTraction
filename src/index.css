@@ -94,7 +94,9 @@ code {
 .submit-btn,
 .header-btn,
 .hero-btn,
-.featured-btn {
+.featured-btn,
+.brand-btn,
+.laptop-btn {
   position: relative;
   overflow: hidden;
 }
@@ -104,7 +106,9 @@ code {
 .submit-btn::before,
 .header-btn::before,
 .hero-btn::before,
-.featured-btn::before {
+.featured-btn::before,
+.brand-btn::before,
+.laptop-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -122,7 +126,9 @@ code {
 .submit-btn:hover::before,
 .header-btn:hover::before,
 .hero-btn:hover::before,
-.featured-btn:hover::before {
+.featured-btn:hover::before,
+.brand-btn:hover::before,
+.laptop-btn:hover::before {
   left: 0;
   border-radius: 0rem 9999px 9999px 0;
 }
@@ -139,7 +145,11 @@ code {
 .hero-btn > span,
 .featured-btn,
 .featured-btn > span,
-.featured-btn > img {
+.featured-btn > img,
+.brand-btn,
+.brand-btn > span,
+.laptop-btn,
+.laptop-btn > span {
   position: relative;
   z-index: 1;
 }
