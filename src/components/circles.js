@@ -19,24 +19,47 @@ const handleMouseOut = () => {
     circle.classList.remove("shift");
   });
 };
+const handleTouch = (index) => {
+  document.querySelectorAll(".circle").forEach((circle, i) => {
+    circle.classList.remove("hovered");
+    circle.classList.remove("shift");
+    if (i === index) {
+      circle.classList.add("hovered");
+    } else {
+      circle.classList.add("shift");
+    }
+  });
+};
+
+const handleTouchEnd = () => {
+  document.querySelectorAll(".circle").forEach((circle) => {
+    circle.classList.remove("hovered");
+    circle.classList.remove("shift");
+  });
+};
 
 const Circles = () => {
   useEffect(() => {
-    document.querySelectorAll(".circle").forEach((circle, index) => {
+    const circles = document.querySelectorAll(".circle");
+    circles.forEach((circle, index) => {
       circle.addEventListener("mouseover", () => handleHover(index));
       circle.addEventListener("mouseout", handleMouseOut);
+      circle.addEventListener("touchstart", () => handleTouch(index));
+      circle.addEventListener("touchend", handleTouchEnd);
     });
 
     return () => {
-      document.querySelectorAll(".circle").forEach((circle) => {
-        circle.removeEventListener("mouseover", handleHover);
+      circles.forEach((circle,index) => {
+        circle.removeEventListener("mouseover", () => handleHover(index));
         circle.removeEventListener("mouseout", handleMouseOut);
+        circle.removeEventListener("touchstart", () => handleTouch(index));
+        circle.removeEventListener("touchend", handleTouchEnd);
       });
     };
   }, []);
 
   return (
-    <div className="circles w-[80%] md:w-[90%] h-full">
+    <div className="circles w-[100%] md:w-[90%] h-full">
       <div className="circle circle1 bg-[#04ABE2]">
         <img
           src="../assets/circle_elearning.png"
