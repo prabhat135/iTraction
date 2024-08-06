@@ -3,7 +3,7 @@ import '../index.css';
 
 const Footer = () => {
   return (
-    <div className="footer bg-[#232323] rounded-t-[100px] text-white">
+    <div className="footer bg-[#232323] rounded-t-[50px] lg:rounded-t-[100px] text-white">
       <div className="footer-container flex flex-col lg:flex-row justify-around pt-14 pb-10">
         <div className="footer-logo flex justify-center items-center">
           <img src="../assets/itraction_logo_blue.png" alt="" className="cursor-pointer"/>
