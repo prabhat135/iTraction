@@ -10,13 +10,13 @@ const Header2 = ({ isVisible }) => {
   };
 
   return (
-    <div className={`header2 hidden md:flex justify-between items-center px-12 lg:px-20 py-8 fixed top-0 left-0 w-full bg-gradient-to-b from-[#151515] via-[#1c1c1c] to-transparent z-10 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`header2 hidden  md:flex justify-between items-center px-12 lg:px-20 py-8 fixed top-0 left-0 w-full bg-gradient-to-b from-[#151515] via-[#1c1c1c] to-transparent z-10 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="logo cursor-pointer">
         <img src="./assets/main_logo_2.png" alt="Logo" className="w-24 h-16"/>
         {/* <img src="./assets/main_logo_white.png" alt="Logo" class="hidden dark:block"/> */}
       </div>
 
-      <div className="header-item hidden  lg:flex">
+      <div className="header-item  hidden  lg:flex">
         <ul className="flex gap-8 text-lg text-white dark:text-black font-normal">
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             Home
