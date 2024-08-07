@@ -1,23 +1,40 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "../index.css";
-import { FeaturedWorkContext } from "../contextApi/FeaturedContext";
 import { useNavigate } from "react-router-dom";
+import axiosInstance from "../config/axios";
 
 const Portfolio = () => {
-  const { featuredWork, setSelectedWork, loading, error } = useContext(FeaturedWorkContext);
+  const [featuredWork, setFeaturedWork] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const navigate = useNavigate('');
+
+  useEffect(() => {
+    const fetchFeaturedWork = async () => {
+      try {
+        const response = await axiosInstance.get("/featured-work");  // Adjust the endpoint as needed
+        setFeaturedWork(response.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFeaturedWork();
+  }, []);
+
   const handleImageClick = (work) => {
-    setSelectedWork(work);
     if (work.imageType === "laptopMobileView") {
-      navigate('/mobile-features');
+      navigate(`/mobile-features/${work._id}`);
     } else {
-      navigate('/brand-features');
+      navigate(`/brand-features/${work._id}`);
     }
   };
 
   if (error) return <div>Error: {error.message}</div>;
   return (
-    <div className="service flex flex-col justify-center items-center sm:p-8">
+    <div className="service flex flex-col justify-center items-center p-8">
       <div className="service-heading text-center items-center">
         <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium pb-8 leading-tight">
           featured
@@ -96,7 +113,7 @@ const Portfolio = () => {
         ) : featuredWork.map(work => (
           <div
             key={work._id}
-            className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#20A5FA] rounded-2xl p-8 w-[350px] sm:w-[400px] max-w-[90%] lg:w-[33%] xl:w-[20%] hover:border hover:border-[#04ABE2] hover:bg-none"
+            className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#20A5FA] rounded-2xl p-8 w-[350px] sm:w-[400px] lg:w-[33%] xl:w-[20%] hover:border hover:border-[#04ABE2] hover:bg-none"
 
           >
             <img src={work.image} alt={work.metadataimage} className="w-[250px] h-[250px] rounded-lg object-hidden" />
@@ -116,11 +133,9 @@ const Portfolio = () => {
         ))}
       </div>
 
-      <div className=" block md:hidden">
-        <div className="flex gap-6 cursor-pointer py-14 sm:hidden">
-          <img src="../assets/arrow_left.png" alt="arrow-left" />
-          <img src="../assets/arrow_right.png" alt="arrow-right" />
-        </div>
+      <div className="flex gap-6 cursor-pointer py-14">
+        <img src="../assets/arrow_left.png" alt="" />
+        <img src="../assets/arrow_right.png" alt="" />
       </div>
     </div>
   );
