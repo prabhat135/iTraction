@@ -15,16 +15,35 @@ const ContactUs = () => {
 
       <div className="contactus-content mx-auto flex justify-center sm:text-left lg:w-[50%] px-5 sm:px-10 md:px-20 lg:px-0">
         <div className="contactus-heading">
-          <h1 className="text-center sm:text-left text-4xl sm:text-5xl xl:text-6xl text-white font-medium mb-8 leading-none">
-            <span className="text-[#04ABE2] pr-0 sm:pr-2">let's </span>
-            have a conversation <span className="text-[#04ABE2]">today!</span>
+          <h1 className="flex flex-wrap text-center sm:text-left text-4xl text-white font-medium mb-8 leading-none">
+            <span className="text-[#04ABE2] ">let's </span>
+             have a 
+            conversation <span className="text-[#04ABE2] pl-0 sm:pl-2">today!</span>
           </h1>
           <p className="flex flex-wrap text-center sm:text-left text-lg md:text-xl lg:text-2xl text-[#999999]">
             Our experts are available to discuss your requirements and to become
             your tech partner
           </p>
-          
+
+          {/* <form>
+              <div className="form-group flex flex-col justify-center p-5 text-white">
+              <label className="text-2xl block mb-1 text-left " htmlFor="name">Name</label>
+              <input className="w-[100%] p-3 border-b-white bg-black " type="text" id="name" name="name" />
+            </div>
+            <div className="form-group flex flex-col justify-center p-5 text-white">
+              <label className="text-2xl block mb-1 text-left " htmlFor="email">Email Id</label>
+              <input className="w-[100%] p-3 border-b-white bg-black " type="email" id="email" name="email" />
+            </div>
+            <div className="form-group flex flex-col justify-center p-5 text-white">
+              <label className="text-2xl block mb-1 text-left " htmlFor="message">Message</label>
+              <textarea className="w-[100%] p-3 border-b-white bg-black " id="message" name="message"></textarea>
+            </div>
+            <button id="submit" type="submit">
+              Submit
+            </button>
+          </form> */}
           <form className="pt-6 mt-4 sm:mt-0 ">
+
             <div className="py-6">
               <h2 className="text-2xl text-left text-[#FFFFFF]">Name</h2>
               <input class="appearance-none bg-transparent border-b w-full text-[#FFFFFF] pt-4 leading-normal text-xl focus:outline-none" type="text" placeholder="" aria-label="Full name" />

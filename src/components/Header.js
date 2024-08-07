@@ -42,8 +42,10 @@ const Header = () => {
         {/* <img src="./assets/main_logo_white.png" alt="Logo" class="hidden dark:block"/> */}
       </div>
 
+
       <div className="header-item hidden  lg:flex">
         <ul className="flex gap-8 text-lg text-white dark:text-black font-normal">
+
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             Home
           </li>
@@ -56,7 +58,9 @@ const Header = () => {
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             Contacts
           </li>
-          {/* <button className="">
+
+          <button className="w-14 h-8">
+
             <img src="./assets/dark_button.png" alt="" />
           </button>
           <button
@@ -68,9 +72,11 @@ const Header = () => {
         </ul>
       </div>
 
-      <div className="hidden lg:block">
-        <button className="header-btn px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none">
-          <span>Schedule a Meeting</span>
+
+      <div className="header-btn hidden lg:block">
+        <button className="px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full">
+
+          Schedule a Meeting
         </button>
       </div>
 

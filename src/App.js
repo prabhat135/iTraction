@@ -10,14 +10,18 @@ function App() {
 
   return (
     <div className="App">
-    
-     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/mobile-features" element={<Laptop/>} />
-        <Route path="/brand-features" element={<BrandImages/>} />
-      </Routes>
-     </BrowserRouter>
+      <Hero />
+      <AboutUs />
+
+    <Domain />
+    <Service />
+   <Portfolio />
+    { /*<Laptop / >*/}
+     {/* <Reviews /> */}
+  <ContactUs />
+    <Footer />
+  
+
     </div>
   );
 }
