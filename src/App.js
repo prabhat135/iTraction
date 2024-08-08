@@ -14,8 +14,8 @@ function App() {
      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/mobile-features" element={<Laptop/>} />
-        <Route path="/brand-features" element={<BrandImages/>} />
+        <Route path="/mobile-features/:workId" element={<Laptop/>} />
+        <Route path="/brand-features/:workId" element={<BrandImages/>} />
       </Routes>
      </BrowserRouter>
     </div>

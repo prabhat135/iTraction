@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { FeaturedWorkProvider } from './contextApi/FeaturedContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FeaturedWorkProvider>
+   
       <App />
-    </FeaturedWorkProvider>
+   
   </React.StrictMode>
 );
 
