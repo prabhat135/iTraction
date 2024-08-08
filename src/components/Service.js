@@ -3,7 +3,7 @@ import Circles from "./circles";
 
 const Service = () => {
   return (
-    <section className="flex flex-col space-y-8 items-center justify-center w-[100%] h-[70vh] md:h-full">
+    <section id="service" className="flex flex-col space-y-8 items-center justify-center w-[100%] h-[70vh] md:h-full">
       <div className="service-container flex flex-col md:flex-row justify-between items-center h-screen p-5 md:p-0 bg-[#151515] text-white w-full max-w-7xl gap-2 md:gap-0">
         <div className="text-content flex flex-col px-5 md:pl-14 mb-2 md:mb-0 w-full md:w-[50%] text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl xl:text-6xl text-center md:text-left pb-6 md:pb-8 font-medium">
