@@ -34,7 +34,7 @@ const Portfolio = () => {
 
   if (error) return <div>Error: {error.message}</div>;
   return (
-    <div className="service flex flex-col justify-center items-center p-8">
+    <div id="works" className="service flex flex-col justify-center items-center sm:p-8">
       <div className="service-heading text-center items-center">
         <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium pb-8 leading-tight">
           featured

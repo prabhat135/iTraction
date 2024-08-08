@@ -44,22 +44,22 @@ const Circles = () => {
     circles.forEach((circle, index) => {
       circle.addEventListener("mouseover", () => handleHover(index));
       circle.addEventListener("mouseout", handleMouseOut);
-      circle.addEventListener("touchstart", () => handleTouch(index));
-      circle.addEventListener("touchend", handleTouchEnd);
+      // circle.addEventListener("touchstart", () => handleTouch(index));
+      // circle.addEventListener("touchend", handleTouchEnd);
     });
 
     return () => {
       circles.forEach((circle,index) => {
         circle.removeEventListener("mouseover", () => handleHover(index));
         circle.removeEventListener("mouseout", handleMouseOut);
-        circle.removeEventListener("touchstart", () => handleTouch(index));
-        circle.removeEventListener("touchend", handleTouchEnd);
+        // circle.removeEventListener("touchstart", () => handleTouch(index));
+        // circle.removeEventListener("touchend", handleTouchEnd);
       });
     };
   }, []);
 
   return (
-    <div className="circles w-[100%] md:w-[90%] h-full">
+    <div className="circles w-[100%] md:w-[80%] h-full">
       <div className="circle circle1 bg-[#04ABE2]">
         <img
           src="../assets/circle_elearning.png"

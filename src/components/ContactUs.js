@@ -3,8 +3,7 @@ import '../index.css';
 
 const ContactUs = () => {
   return (
-    <div className="contactus flex flex-col-reverse lg:flex-row justify-around sm:p-4 lg:px-20 lg:pb-20 gap-8 dark:bg-white ">
-
+    <div id="contacts" className="contactus flex flex-col-reverse lg:flex-row justify-around sm:p-4 lg:px-20 lg:pb-20 gap-8 dark:bg-white ">
       <div className="contactus-image flex items-center justify-center lg:justify-normal mb-20 sm:mb-0 w-full lg:w-[50%]">
         <img
           src="./assets/contactus.gif"

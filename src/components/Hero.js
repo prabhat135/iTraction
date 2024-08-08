@@ -39,8 +39,8 @@ const Hero = () => {
   // const [darkMode, setdarkMode] = useState(false);
 
   return (
-    <div className="">
-      <div className="hero min-h-screen dark:bg-white px-4 pt-4 sm:px-8 sm:pt-8">
+    <div id="hero" className="">
+      <div className="hero  dark:bg-white px-4 pt-4 sm:px-8 sm:pt-8">
         <div className="bg-gradient-to-br from-[#6C6C6C] to-black  rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
           {/* ____HEADER____ */}
           <Header />
@@ -99,7 +99,7 @@ const Hero = () => {
 
         {/* ____STATS____ */}
 
-        <div className="flex flex-wrap justify-evenly pt-12 lg:pt-20 xl:pb-10 2xl:pb-0">
+        <div className="flex flex-wrap justify-evenly  lg:mb-9 lg:pt-[3rem] xl:pb-[0rem] 2xl:pb-0">
           {statsData.map((item, index) => (
             <div
               key={index}
@@ -109,7 +109,7 @@ const Hero = () => {
                 <img
                   src={item.image}
                   alt=""
-                  className="h-[65px] lg:h-[95px] mx-auto"
+                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto"
                 />
                 <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
                   {item.number}

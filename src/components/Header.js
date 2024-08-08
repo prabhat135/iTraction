@@ -42,21 +42,20 @@ const Header = () => {
         {/* <img src="./assets/main_logo_white.png" alt="Logo" class="hidden dark:block"/> */}
       </div>
 
-
       <div className="header-item hidden  lg:flex">
         <ul className="flex gap-8 text-lg text-white dark:text-black font-normal">
 
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-            Home
+          <a href="#hero">Home</a>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-            Service
+             <a href="#service">Service</a>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-            Works
+            <a href="#works">Works</a>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-            Contacts
+            <a href="#contacts">Contacts</a>
           </li>
 
           <button className="w-14 h-8">
@@ -71,12 +70,9 @@ const Header = () => {
           </button> */}
         </ul>
       </div>
-
-
-      <div className="header-btn hidden lg:block">
-        <button className="px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full">
-
-          Schedule a Meeting
+      <div className="hidden lg:block">
+        <button className="header-btn px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none">
+          <span>Schedule a Meeting</span>
         </button>
       </div>
 
@@ -89,18 +85,22 @@ const Header = () => {
       {isMenuOpen && (
   <div
   ref={menuRef}
-   className="lg:hidden fixed w-full sm:right-4 right-[0.1rem]   top-8 px-4 flex justify-end items-center z-50">
-    <div className="w-[100%] max-w-md rounded-[25px] bg-gradient-to-br from-[#6C6C6C] to-black p-4">
+   className="lg:hidden fixed w-[100%]  right-0.5 h-full top-0 flex justify-center items-center z-50">
+    <div className="w-[100%] h-[100%]  bg-stone-900 p-4">
       <div
         onClick={toggleMenu}
-        className="inset-1 w-7   z-[50]  cursor-pointer text-white"
+        className="inset-1 w-9   z-[50]  cursor-pointer text-white"
       >
         <XMarkIcon />
       </div>
-      <ul className="flex flex-col -mt-8 items-center gap-6 text-lg text-white dark:text-black font-normal py-4">
-        <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          Home
+      <ul className="flex flex-col  pb-[3rem] items-end h-full justify-between  ">
+      <div className="flex w-[100%] flex-col gap-[4rem] text-[2.2rem] mt-5 items-end   text-lg text-white dark:text-black font-normal py-4">
+        <li className="cursor-pointer  tracking-wide hover:text-[#04abe2]">
+          Homo
+          
         </li>
+       
+        
         <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
           Service
         </li>
@@ -110,7 +110,8 @@ const Header = () => {
         <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
           Contacts
         </li>
-        <button className="header-btn px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none">
+        </div>
+        <button className="header-btn px-4  mb-[70px] py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none">
           <span>Schedule a Meeting</span>
         </button>
       </ul>
