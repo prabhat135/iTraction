@@ -48,7 +48,7 @@ const BrandImages = () => {
   };
 
   return (
-    <div className="relative flex flex-col md:flex-row items-center min-h-screen justify-between p-4 md:p-10 bg-gray-900 text-white">
+    <div className="relative flex flex-col md:flex-row items-center min-h-screen justify-between p-4 md:p-10 bg-gray-900 text-white dark:bg-white">
       {/* Circles in Background */}
       <div className="absolute inset-0 z-10">
         <div className="circle circle-1"></div>
@@ -60,13 +60,13 @@ const BrandImages = () => {
 
       {/* Description Section */}
       <div className="flex flex-col flex-wrap w-full md:w-1/3 md:pr-10 mb-6 md:mb-0">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">{selectedWork.title}</h1>
-        <p className="text-base md:text-lg mb-6">{selectedWork.description}</p>
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-white dark:text-black">{selectedWork.title}</h1>
+        <p className="text-base md:text-lg mb-6 text-[#999999]">{selectedWork.description}</p>
         <button
           onClick={handleButtonClick}
-          className="border-2 border-white hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl w-1/3"
+          className="laptop-btn text-xl bg-transparent border text-white w-1/3 py-2 px-4 hover:border-none rounded-full dark:text-black dark:hover:text-white dark:border-black"
         >
-          Visit Project
+          <span>Visit Project</span>
         </button>
       </div>
 

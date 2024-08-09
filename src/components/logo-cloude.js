@@ -9,7 +9,7 @@ const logos = [
   
   const AnimatedLogoCloud = () => {
     return (
-     <section className="w-full flex items-center justify-center h-full z-20">
+     <section className="w-full flex items-center justify-center h-full z-20 dark:bg-white">
        <div className="w-full pt-10 min-h-[28vh]">
         <div className="mx-auto w-full px-4 md:px-8">
           <div

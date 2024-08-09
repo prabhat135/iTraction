@@ -51,7 +51,10 @@ const Laptop = () => {
   };
 
   return (
-    <div className="relative flex flex-col md:flex-row justify-center sm:justify-between items-center min-h-screen p-4 md:p-10 bg-gray-900 text-white">
+    <div className="relative flex flex-col md:flex-row justify-center sm:justify-between items-center min-h-screen p-4 md:p-10 bg-gray-900 text-white dark:bg-white">
+      {/* Background Image */}
+
+      {/* Circles in Background */}
       <div className="absolute inset-0 flex justify-center items-center">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
@@ -61,13 +64,13 @@ const Laptop = () => {
       </div>
 
       <div className="flex flex-col md:w-1/3 md:pr-8 mb-6 md:mb-0 relative z-10">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">{selectedWork.title}</h1>
-        <p className="text-base md:text-lg mb-6">{selectedWork.description}</p>
+        <h1 className="text-5xl text-center md:text-5xl md:w-[20rem] lg:text-6xl font-bold mb-4 lg:w-96 text-white dark:text-black">{selectedWork.title}</h1>
+        <p className="text-base md:text-lg mb-6 text-[#999999]">{selectedWork.description}</p>
         <button
           onClick={handleButtonClick}
-          className="border-2 border-white hover:bg-blue-700 text-white w-48 font-bold py-2 px-4 rounded-2xl"
+          className="laptop-btn text-xl bg-transparent border text-white py-2 px-1 hover:border-none rounded-full w-48 dark:text-black dark:hover:text-white dark:border-black"
         >
-          Visit Project
+          <span>Visit Project</span>
         </button>
       </div>
 

@@ -5,31 +5,37 @@ import "../index.css";
 const statsData = [
   {
     image: "./assets/vector1.png",
+    darkimage: "./assets/vector1_darktheme.png",
     number: "50+",
     text: "Top Developers",
   },
   {
     image: "./assets/vector2.png",
+    darkimage: "./assets/vector2_darktheme.png",
     number: "100+",
     text: "Projects Completed",
   },
   {
     image: "./assets/vector3.png",
+    darkimage: "./assets/vector3_darktheme.png",
     number: "50+",
     text: "Applications Delivered",
   },
   {
     image: "./assets/vector4.png",
+    darkimage: "./assets/vector4_darktheme.png",
     number: "96%",
     text: "Projects Success",
   },
   {
     image: "./assets/vector5.png",
+    darkimage: "./assets/vector5_darktheme.png",
     number: "100+",
     text: "Enterprise Customers",
   },
   {
     image: "./assets/vector6.png",
+    darkimage: "./assets/vector6_darktheme.png",
     number: "4.7",
     text: "Star rating by 100+ Enterprise Customers",
   },
@@ -40,8 +46,8 @@ const Hero = () => {
 
   return (
     <div id="hero" className="">
-      <div className="hero  dark:bg-white px-4 pt-4 sm:px-8 sm:pt-8">
-        <div className="bg-gradient-to-br from-[#6C6C6C] to-black  rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
+      <div className="hero dark:bg-white px-4 pt-4 sm:px-8 sm:pt-8">
+        <div className="bg-gradient-to-br from-[#6C6C6C] to-black rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
           {/* ____HEADER____ */}
           <Header />
 
@@ -55,15 +61,12 @@ const Hero = () => {
                   <p className="mt-2 lg:mt-4">
                     <span>with </span>
                     <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container w-[170px] md:w-[200px] lg:w-[209px] xl:w-[240px] 2xl:w-[290px] mb-[-14px] md:mb-[-18px]">
-                      <span className="marquee-text">
+                      <span className="marquee-text dark:text-white">
                         Artificial Intelligence
                       </span>
                     </span>
                   </p>
                 </div>
-                {/* <p className="mt-2 lg:mt-4 text-center lg:text-left">
-                  App Development
-                </p> */}
               </div>
 
               <div>
@@ -109,7 +112,12 @@ const Hero = () => {
                 <img
                   src={item.image}
                   alt=""
-                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto"
+                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto dark:hidden"
+                />
+                <img
+                  src={item.darkimage}
+                  alt=""
+                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto hidden dark:block"
                 />
                 <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
                   {item.number}

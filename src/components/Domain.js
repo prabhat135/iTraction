@@ -3,7 +3,7 @@ import ExpandCards from "./ExpandCards";
 
 const Domain = () => {
   return (
-    <div className="domain flex flex-col justify-center items-center p-8">
+    <div className="domain flex flex-col justify-center items-center p-8 dark:bg-white">
       <div className="domain-heading text-center flex justify-center items-center ">
         <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium mt-8 leading-none">
           do you have an idea?
@@ -29,12 +29,12 @@ const Domain = () => {
         <ExpandCards />
       </div>
 
-      {/* <div className="">
-        <div className="flex gap-6 cursor-pointer py-14 ">
-          <img src="../assets/arrow_left.png" alt="arrow-left" />
-          <img src="../assets/arrow_right.png" alt="arrow-right" />
-        </div>
-      </div> */}
+      <div className="hidden md:flex gap-6 cursor-pointer py-14 ">
+        <img src="../assets/arrow_left.png" alt="arrow-left" className="dark:hidden" />
+        <img src="../assets/arrow_right.png" alt="arrow-right" className="dark:hidden" />
+        <img src="../assets/arrow_left_dark.png" alt="arrow-left" className="hidden dark:block" />
+        <img src="../assets/arrow_right_dark.png" alt="arrow-right" className="hidden dark:block" />
+      </div>
     </div>
   );
 };

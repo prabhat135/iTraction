@@ -14,7 +14,7 @@ const ContactUs = () => {
 
       <div className="contactus-content mx-auto flex justify-center sm:text-left lg:w-[50%] px-5 sm:px-10 md:px-20 lg:px-0">
         <div className="contactus-heading">
-          <h1 className="text-center sm:text-left text-4xl sm:text-5xl xl:text-6xl text-white font-medium mb-8 leading-none">
+          <h1 className="text-center sm:text-left text-4xl sm:text-5xl xl:text-6xl text-white font-medium mb-8 leading-none dark:text-black">
             <span className="text-[#04ABE2] pr-0 sm:pr-2">let's </span>
             have a conversation <span className="text-[#04ABE2]">today!</span>
           </h1>
@@ -23,25 +23,25 @@ const ContactUs = () => {
             your tech partner
           </p>
           
-          <form className="pt-6 mt-4 sm:mt-0 ">
+          <form className="pt-6 mt-4 sm:mt-0 text-white dark:text-black">
             <div className="py-6">
-              <h2 className="text-2xl text-left text-[#FFFFFF]">Name</h2>
-              <input class="appearance-none bg-transparent border-b w-full text-[#FFFFFF] pt-4 leading-normal text-xl focus:outline-none" type="text" placeholder="" aria-label="Full name" />
+              <h2 className="text-2xl text-left font-semibold">name</h2>
+              <input class="appearance-none bg-transparent border-b border-white w-full pt-4 leading-normal text-xl focus:outline-none dark:border-[#151515]" type="text" placeholder="" aria-label="Full name" />
             </div>
 
             <div className="py-6">
-              <h2 className="text-2xl text-left text-[#FFFFFF]">E-Mail</h2>
-              <input class="appearance-none bg-transparent border-b w-full text-[#FFFFFF] pt-4 leading-normal text-xl focus:outline-none" type="e-mail" placeholder="" aria-label="E-mail" />
+              <h2 className="text-2xl text-left font-semibold">e-Mail</h2>
+              <input class="appearance-none bg-transparent border-b border-white w-full pt-4 leading-normal text-xl focus:outline-none dark:border-[#151515]" type="e-mail" placeholder="" aria-label="E-mail" />
             </div>
 
             <div className="py-6">
-              <h2 className="text-2xl text-left text-[#FFFFFF]">Message</h2>
+              <h2 className="text-2xl text-left font-semibold">message</h2>
               {/* <input class="appearance-none bg-transparent border-b w-full text-[#FFFFFF] pt-4 leading-normal text-xl focus:outline-none h-14" type="message" placeholder="" aria-label="message" /> */}
-              <textarea class="appearance-none bg-transparent border-b w-full text-[#FFFFFF] pt-4 leading-normal text-xl focus:outline-none h-14 min-h-28" type="message" placeholder="" aria-label="message" />
+              <textarea class="appearance-none bg-transparent border-b border-white w-full pt-4 leading-normal text-xl focus:outline-none h-14 min-h-28 dark:border-[#151515]" type="message" placeholder="" aria-label="message" />
             </div>
 
-            <div className="flex justify-center pt-10">
-              <button className="submit-btn bg-transparent text-white text-2xl px-10 py-2 rounded-full border hover:border-none"><span>Submit</span></button>
+            <div className="flex justify-center pt-10 text-white dark:text-black dark:hover:text-white">
+              <button className="submit-btn bg-transparent text-2xl px-10 py-2 rounded-full border hover:border-none dark:border-black"><span>Submit</span></button>
             </div>
           </form>
         </div>

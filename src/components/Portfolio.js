@@ -34,7 +34,7 @@ const Portfolio = () => {
 
   if (error) return <div>Error: {error.message}</div>;
   return (
-    <div className="service flex flex-col justify-center items-center p-8">
+    <div className="service flex flex-col justify-center items-center p-8 dark:bg-white  ">
       <div className="service-heading text-center items-center">
         <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium pb-8 leading-tight">
           featured
@@ -113,7 +113,7 @@ const Portfolio = () => {
         ) : featuredWork.map(work => (
           <div
             key={work._id}
-            className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#20A5FA] rounded-2xl p-8 w-[350px] sm:w-[400px] lg:w-[33%] xl:w-[20%] hover:border hover:border-[#04ABE2] hover:bg-none"
+            className="flex flex-col items-center bg-gradient-to-b from-[#04ABE2] to-[#20A5FA] rounded-2xl p-8 w-[350px] sm:w-[400px] max-w-[90%] lg:w-[33%] xl:w-[20%] hover:border hover:border-[#04ABE2] hover:bg-none dark:hover:bg-[#04ABE2]"
 
           >
             <img src={work.image} alt={work.metadataimage} className="w-[250px] h-[250px] rounded-lg object-hidden" />
@@ -121,7 +121,7 @@ const Portfolio = () => {
               {work.metadataimage}
             </h2>
 
-            <button onClick={() => handleImageClick(work)} className="featured-btn absolute bottom-0 flex items-center gap-2 bg-white text-black text-xl px-4 py-2 rounded-full">
+            <button onClick={() => handleImageClick(work)} className="featured-btn absolute bottom-0 flex items-center gap-2 bg-white text-black text-xl px-4 py-2 rounded-full dark:hover:border dark:hover:border-black">
               <span>view case study</span>
               <img
                 src="../assets/arrow_diag.png"
@@ -133,9 +133,11 @@ const Portfolio = () => {
         ))}
       </div>
 
-      <div className="flex gap-6 cursor-pointer py-14">
-        <img src="../assets/arrow_left.png" alt="" />
-        <img src="../assets/arrow_right.png" alt="" />
+      <div className="hidden xl:flex gap-6 cursor-pointer py-14">
+        <img src="../assets/arrow_left.png" alt="arrow-left" className="dark:hidden" />
+        <img src="../assets/arrow_right.png" alt="arrow-right" className="dark:hidden" />
+        <img src="../assets/arrow_left_dark.png" alt="arrow-left" className="hidden dark:block" />
+        <img src="../assets/arrow_right_dark.png" alt="arrow-right" className="hidden dark:block" />
       </div>
     </div>
   );
