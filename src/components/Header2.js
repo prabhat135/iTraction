@@ -1,25 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import "../index.css";
 
 const Header2 = ({ isVisible }) => {
   const [darkMode, setdarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleDarkMode = () => {
     setdarkMode(!darkMode);
     document.body.classList.toggle("dark");
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const menuRef = useRef(null);
-
-  // const toggleDarkMode = () => {
-  //   setdarkMode(!darkMode);
-  // };
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prevState => !prevState);
+  }, []);
 
   
   useEffect(() => {
