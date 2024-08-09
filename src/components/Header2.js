@@ -13,7 +13,7 @@ const Header2 = ({ isVisible }) => {
   };
 
   const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prevState => !prevState);
+    setIsMenuOpen((prevState) => !prevState);
   }, []);
 
   
