@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import "../index.css";
 
@@ -12,9 +12,9 @@ const Header = () => {
     document.body.classList.toggle("dark");
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prevState) => !prevState);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {

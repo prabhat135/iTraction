@@ -19,24 +19,24 @@ const handleMouseOut = () => {
     circle.classList.remove("shift");
   });
 };
-const handleTouch = (index) => {
-  document.querySelectorAll(".circle").forEach((circle, i) => {
-    circle.classList.remove("hovered");
-    circle.classList.remove("shift");
-    if (i === index) {
-      circle.classList.add("hovered");
-    } else {
-      circle.classList.add("shift");
-    }
-  });
-};
+// const handleTouch = (index) => {
+//   document.querySelectorAll(".circle").forEach((circle, i) => {
+//     circle.classList.remove("hovered");
+//     circle.classList.remove("shift");
+//     if (i === index) {
+//       circle.classList.add("hovered");
+//     } else {
+//       circle.classList.add("shift");
+//     }
+//   });
+// };
 
-const handleTouchEnd = () => {
-  document.querySelectorAll(".circle").forEach((circle) => {
-    circle.classList.remove("hovered");
-    circle.classList.remove("shift");
-  });
-};
+// const handleTouchEnd = () => {
+//   document.querySelectorAll(".circle").forEach((circle) => {
+//     circle.classList.remove("hovered");
+//     circle.classList.remove("shift");
+//   });
+// };
 
 const Circles = () => {
   useEffect(() => {
