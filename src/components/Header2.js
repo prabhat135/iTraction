@@ -87,7 +87,7 @@ const Header2 = ({ isVisible }) => {
         <XMarkIcon />
       </div>
       <ul className="flex flex-col pb-[3rem] items-center h-full justify-between">
-      <div className="flex flex-col w-[100%] gap-[4rem] text-[2.2rem] mt-5 items-end text-lg text-white dark:text-black font-normal py-4">
+      <div className="flex flex-col w-[100%] gap-[4rem] text-[2.2rem] mt-5 items-center text-lg text-white dark:text-black font-normal py-4">
         <li className="cursor-pointer  tracking-wide hover:text-[#04abe2]">
           Home
         </li>
