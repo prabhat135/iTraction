@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import "../index.css";
+import { Link } from "react-scroll";
 
 const Header2 = ({ isVisible }) => {
   const [darkMode, setdarkMode] = useState(false);
@@ -37,24 +38,60 @@ const Header2 = ({ isVisible }) => {
 
   return (
     <div className={`header2 flex justify-between items-center px-8 sm:px-12 lg:px-20 py-8 fixed top-0 left-0 w-full bg-gradient-to-b from-[#151515] via-[#1c1c1c] to-transparent z-10 transition-opacity duration-500 dark:from-white dark:to-transparent ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <div className="logo cursor-pointer">
-        <img src="./assets/main_logo_2.png" alt="Logo" className="w-24 h-16"/>
-        {/* <img src="./assets/main_logo_white.png" alt="Logo" class="hidden dark:block"/> */}
+      <div className="logo">
+        <img src="./assets/main_logo_2.png" alt="Logo" className="w-24 h-16 cursor-pointer dark:hidden" />
+        <img src="./assets/main_logo_2_dark.png" alt="Logo" className="w-24 h-16 cursor-pointer hidden dark:block" />
       </div>
 
       <div className="header-item  hidden  lg:flex">
         <ul className="flex gap-8 text-lg text-white dark:text-black font-normal">
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          <a href="#hero">Home</a>
+          <Link
+              activeClass="active"
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Home
+            </Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-             <a href="#service">Service</a>
+          <Link
+              activeClass="active"
+              to="service"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Service
+            </Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-            <a href="#works">Works</a>
+          <Link
+              activeClass="active"
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Works
+            </Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-            <a href="#contacts">Contacts</a>
+          <Link
+              activeClass="active"
+              to="contactus"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Contacts
+            </Link>
           </li>
           <button onClick={toggleDarkMode} className="">
             <img src="./assets/dark_button.png" alt="" className="hidden dark:block"/>
@@ -64,9 +101,11 @@ const Header2 = ({ isVisible }) => {
       </div>
 
       <div className="hidden lg:block">
+      <a href="https://calendly.com/itraction" target="blank">
         <button className="header-btn px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none dark:hover:text-white">
           <span>Schedule a Meeting</span>
         </button>
+      </a>
       </div>
 
       <div className="lg:hidden flex items-center">
@@ -89,25 +128,63 @@ const Header2 = ({ isVisible }) => {
       <ul className="flex flex-col pb-[3rem] items-center h-full justify-between">
       <div className="flex flex-col w-[100%] gap-[4rem] text-[2.2rem] mt-5 items-center text-lg text-white dark:text-black font-normal py-4">
         <li className="cursor-pointer  tracking-wide hover:text-[#04abe2]">
-          Home
+        <Link
+              activeClass="active"
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Home
+            </Link>
         </li>
         <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          Service
+        <Link
+              activeClass="active"
+              to="service"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Service
+            </Link>
         </li>
         <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          Works
+        <Link
+              activeClass="active"
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Works
+            </Link>
         </li>
         <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          Contacts
+        <Link
+              activeClass="active"
+              to="contactus"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Contacts
+            </Link>
         </li>
         <button onClick={toggleDarkMode} className="">
           <img src="./assets/dark_button.png" alt="" className="hidden dark:block"/>
           <img src="./assets/light_button.png" alt="" className="dark:hidden"/>
         </button>
         </div>
+        <a href="https://calendly.com/itraction" target="blank">
         <button className="header-btn px-4 mb-[70px] py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none">
           <span>Schedule a Meeting</span>
         </button>
+        </a>
       </ul>
     </div>
   </div>

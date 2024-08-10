@@ -1,5 +1,6 @@
 import React from "react";
 import '../index.css';
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
             <ul class="left-table flex-1 mr-8">
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="Blockchain Development"
                   className="hover:text-[#04abe2]"
                 >
@@ -24,7 +25,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="Ruby on Rails"
                   className="hover:text-[#04abe2]"
                 >
@@ -33,7 +34,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="Amazon Web Services"
                   className="hover:text-[#04abe2]"
                 >
@@ -42,7 +43,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="NodeJS"
                   className="hover:text-[#04abe2]"
                 >
@@ -53,7 +54,7 @@ const Footer = () => {
             <ul class="right-table">
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="eCommerce Development"
                   className="hover:text-[#04abe2]"
                 >
@@ -62,7 +63,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="Grails"
                   className="hover:text-[#04abe2]"
                 >
@@ -71,7 +72,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="Symfony"
                   className="hover:text-[#04abe2]"
                 >
@@ -80,7 +81,7 @@ const Footer = () => {
               </li>
               <li className="leading-8">
                 <a
-                  href="/"
+                  href="#service"
                   title="Selenium Automation"
                   className="hover:text-[#04abe2]"
                 >
@@ -95,32 +96,35 @@ const Footer = () => {
           <h2 className="font-semibold text-[40px] mb-7 text-center">company</h2>
           <div class="service-table flex flex-wrap text-[16px] text-left">
             <ul class="left-table flex-1 mr-8">
-              <li className="leading-8">
+              <li className="leading-8 hover:text-[#04abe2]">
                 <a
-                  href="/"
+                  href="#aboutus"
                   title="About Us"
-                  className="hover:text-[#04abe2]"
+                  className=""
                 >
                   About Us
                 </a>
               </li>
-              <li className="leading-8">
+              <li className="leading-8 hover:text-[#04abe2]">
                 <a
                   href="/"
                   title="Careers"
-                  className="hover:text-[#04abe2]"
+                  className=""
                 >
                   Careers
                 </a>
               </li>
-              <li className="leading-8">
-                <a
-                  href="/"
-                  title="Contact Us"
-                  className="hover:text-[#04abe2]"
-                >
-                  Contact Us
-                </a>
+              <li className="leading-8 hover:text-[#04abe2]">
+              <Link
+              activeClass="active"
+              to="contactus"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={300}
+            >
+              Contact Us
+            </Link>
               </li>
             </ul>
             <ul class="right-table">

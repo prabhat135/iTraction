@@ -34,7 +34,7 @@ const Portfolio = () => {
 
   if (error) return <div>Error: {error.message}</div>;
   return (
-    <div className="service flex flex-col justify-center items-center p-8 dark:bg-white  ">
+    <div id="portfolio" className="service flex flex-col justify-center items-center p-8 dark:bg-white  ">
       <div className="service-heading text-center items-center">
         <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium pb-8 leading-tight">
           featured
@@ -133,12 +133,12 @@ const Portfolio = () => {
         ))}
       </div>
 
-      <div className="hidden xl:flex gap-6 cursor-pointer py-14">
+      {/* <div className="hidden xl:flex gap-6 cursor-pointer py-14">
         <img src="../assets/arrow_left.png" alt="arrow-left" className="dark:hidden" />
         <img src="../assets/arrow_right.png" alt="arrow-right" className="dark:hidden" />
         <img src="../assets/arrow_left_dark.png" alt="arrow-left" className="hidden dark:block" />
         <img src="../assets/arrow_right_dark.png" alt="arrow-right" className="hidden dark:block" />
-      </div>
+      </div> */}
     </div>
   );
 };

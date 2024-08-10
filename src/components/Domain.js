@@ -29,12 +29,12 @@ const Domain = () => {
         <ExpandCards />
       </div>
 
-      <div className="hidden md:flex gap-6 cursor-pointer py-14 ">
+      {/* <div className="hidden md:flex gap-6 cursor-pointer py-14 ">
         <img src="../assets/arrow_left.png" alt="arrow-left" className="dark:hidden" />
         <img src="../assets/arrow_right.png" alt="arrow-right" className="dark:hidden" />
         <img src="../assets/arrow_left_dark.png" alt="arrow-left" className="hidden dark:block" />
         <img src="../assets/arrow_right_dark.png" alt="arrow-right" className="hidden dark:block" />
-      </div>
+      </div> */}
     </div>
   );
 };

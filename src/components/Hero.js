@@ -1,43 +1,44 @@
 import React from "react";
 import Header from "./Header";
 import "../index.css";
+import NumberCounter from 'number-counter';
 
 const statsData = [
   {
     image: "./assets/vector1.png",
     darkimage: "./assets/vector1_darktheme.png",
-    number: "50+",
+    number: <NumberCounter end={50} start={20} delay='1' postFix="+" />,
     text: "Top Developers",
   },
   {
     image: "./assets/vector2.png",
     darkimage: "./assets/vector2_darktheme.png",
-    number: "100+",
+    number: <NumberCounter end={100} start={50} delay='1' postFix="+" />,
     text: "Projects Completed",
   },
   {
     image: "./assets/vector3.png",
     darkimage: "./assets/vector3_darktheme.png",
-    number: "50+",
+    number: <NumberCounter end={50} start={0} delay='1' postFix="+" />,
     text: "Applications Delivered",
   },
   {
     image: "./assets/vector4.png",
     darkimage: "./assets/vector4_darktheme.png",
-    number: "96%",
+    number: <NumberCounter end={96} start={46} delay='1' postFix="%" />,
     text: "Projects Success",
   },
   {
     image: "./assets/vector5.png",
     darkimage: "./assets/vector5_darktheme.png",
-    number: "100+",
+    number: <NumberCounter end={100} start={50} delay='1' postFix="+" />,
     text: "Enterprise Customers",
   },
   {
     image: "./assets/vector6.png",
     darkimage: "./assets/vector6_darktheme.png",
-    number: "4.7",
-    text: "Star rating by 100+ Enterprise Customers",
+    number: <NumberCounter end={4.7} start={0.7} delay='1' />,
+    text: "Star Rating",
   },
 ];
 
@@ -85,15 +86,17 @@ const Hero = () => {
                 </p>
               </div>
               <div className="text-center lg:text-left">
+                <a href="#contactus">
                 <button className="hero-btn px-4 py-2 cursor-pointer bg-white text-black hover:text-white dark:border dark:border-black rounded-full text-lg lg:text-xl">
                   <span>Get Started</span>
                 </button>
+                </a>
               </div>
             </div>
             <div className="hero-image pr-0 lg:pr-10 flex justify-center lg:justify-end">
               <img
                 src="../assets/hero_img2.png"
-                className="w-full max-w-xs lg:max-w-[30rem] h-auto 2xl:pt-[7px]"
+                className="w-full max-w-xs lg:max-w-[30rem] h-auto 2xl:pt-[10px]"
                 alt="hero"
               />
             </div>
@@ -101,7 +104,6 @@ const Hero = () => {
         </div>
 
         {/* ____STATS____ */}
-
         <div className="flex flex-wrap justify-evenly  lg:mb-9 lg:pt-[3rem] xl:pb-[0rem] 2xl:pb-0">
           {statsData.map((item, index) => (
             <div
@@ -123,7 +125,7 @@ const Hero = () => {
                   {item.number}
                 </h3>
                 <div className="absolute left-0 right-0 text-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-600">
-                  <p className="text-white dark:text-black text-md pt-2 font-medium">
+                  <p className="text-white dark:text-black text-sm pt-2 font-medium">
                     {item.text}
                   </p>
                 </div>
