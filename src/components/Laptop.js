@@ -3,7 +3,7 @@ import { useSpring, animated } from "@react-spring/web";
 import '../css/brandview.css';
 import { useParams } from "react-router-dom";
 import axiosInstance from "../config/axios";
-
+import { motion } from 'framer-motion';
 const Laptop = () => {
   const { workId } = useParams();
   const [selectedWork, setSelectedWork] = useState(null);
@@ -20,6 +20,8 @@ const Laptop = () => {
       try {
         const response = await axiosInstance.get(`/featured-work/${workId}`);
         setSelectedWork(response.data);
+        console.log(response.data);
+        
       } catch (err) {
         console.error("Failed to fetch the selected work", err);
       }
@@ -49,22 +51,50 @@ const Laptop = () => {
       window.open(url, '_blank');
     }
   };
+  const circleVariants = {
+    hidden: { opacity: 0, x: -300 },
+    visible: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: index * 0.1,
+        duration: 0.3,
+        ease: 'easeOut',
+      },
+    }),
+  };
 
   return (
-    <div className="relative flex flex-col md:flex-row justify-center sm:justify-between items-center min-h-screen p-4 md:p-10 bg-gray-900 text-white dark:bg-white">
+    <div className="relative flex flex-col lg:flex-row  gap-5   lg:justify-between  items-center   min-h-screen p-4 md:p-10 bg-gray-900 text-white dark:bg-white">
       {/* Background Image */}
 
       {/* Circles in Background */}
-      <div className="absolute inset-0 flex justify-center items-center">
+
+      {Array.from({ length: 5 }).map((_, index) => (
+          <motion.div
+            key={index}
+            className={`circle circle-${index + 1}`}
+            custom={index}
+            initial="hidden"
+            animate="visible"
+            variants={circleVariants}
+          />
+        ))}
+      
+
+
+      {/* <div className="absolute inset-0 flex justify-center items-center">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
         <div className="circle circle-3"></div>
         <div className="circle circle-4"></div>
         <div className="circle circle-5"></div>
-      </div>
+      </div> */}
 
-      <div className="flex flex-col md:w-1/3 md:pr-8 mb-6 md:mb-0 relative z-10">
-        <h1 className="text-5xl text-center md:text-5xl md:w-[20rem] lg:text-6xl font-bold mb-4 lg:w-96 text-white dark:text-black">{selectedWork.title}</h1>
+      <div className="flex  flex-col mt-[3rem] md:mt-0 lg:flex-1  mb-6 md:mb-0 relative z-10">
+      <p className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-center font-bold mb-4 text-white dark:text-black">
+  {selectedWork.title}
+</p>
         <p className="text-base md:text-lg mb-6 text-[#999999]">{selectedWork.description}</p>
         <button
           onClick={handleButtonClick}
@@ -75,13 +105,22 @@ const Laptop = () => {
       </div>
 
       {selectedWork.laptopViewImages.length > 0 && (
-        <div className="flex justify-center items-center md:w-1/2 relative">
-          <animated.img
+        <div className="flex justify-center w-[100%]  lg:flex-1 items-center  relative">
+          
+        <animated.img
+  src={selectedWork.laptopViewImages[currentLaptopImageIndex]}
+  alt={`laptop-view-${currentLaptopImageIndex}`}
+  className={`w-[100%] max-w-full h-auto ${selectedWork.title == "Adiray Global" ? "md:aspect-[22/11]" : "md:aspect-[16/10]"} object-cover  md:max-w-[900px]`}
+
+  // className=`{w-[100%] max-w-full h-auto md:aspect-[22/11] ${selectedWork.laptopViewImages[currentLaptopImageIndex]==0 ?"md:aspect-[22/11]":"md:aspect-[16/11]"} object-cover bg-red-400  md:max-w-[900px]}`
+  style={laptopImageSpring}
+/>
+          {/* <animated.img
             src={selectedWork.laptopViewImages[currentLaptopImageIndex]}
             alt={`laptop-view-${currentLaptopImageIndex}`}
             className="w-full max-w-[900px] object-cover"
             style={laptopImageSpring}
-          />
+          /> */}
         </div>
       )}
     </div>
