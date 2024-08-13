@@ -19,7 +19,7 @@ const ContactUs = () => {
             have a conversation <span className="text-[#04ABE2]">today!</span>
           </h1>
           <p className="flex flex-wrap text-center sm:text-left text-lg md:text-xl lg:text-2xl text-[#999999]">
-            Our experts are available to discuss your requirements and to become
+            our experts are available to discuss your requirements and to become
             your tech partner
           </p>
           

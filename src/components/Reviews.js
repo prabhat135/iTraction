@@ -20,7 +20,7 @@ const Testimonials = () => {
             alt=""
           />
           <h2 className="font-medium mb-8 text-white text-4xl sm:text-5xl xl:text-6xl text-center md:text-left dark:text-black">
-            what <span className="text-[#04ABE2]">our</span> <br />Customers <span className="text-[#04ABE2]">says</span>
+            what <span className="text-[#04ABE2]">our</span> <br />customers <span className="text-[#04ABE2]">says</span>
           </h2>
           <p className="mb-8 text-lg lg:text-2xl text-[#999999] text-center md:text-left">
             real stories, real satisfaction—hear what our happy customers have

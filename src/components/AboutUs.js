@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="aboutus-content flex flex-col items-center justify-center  lg:w-1/2 p-4 ">
         <div className="aboutus-heading items-center justify-center text-center lg:text-left">
           <h1 className="text-center lg:text-left text-4xl sm:text-5xl xl:text-6xl text-white font-medium xl:px-10 pb-8 lg:pb-16 leading-tight dark:text-black">
-            We build <span className="text-[#04ABE2]">solutions &<br /> smart
+            we build <span className="text-[#04ABE2]">solutions &<br /> smart
             </span> delivering<br /> top- <span className="text-[#04ABE2]">notch service</span>
           </h1>
 

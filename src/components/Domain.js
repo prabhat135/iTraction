@@ -1,5 +1,6 @@
 import React from "react";
 import ExpandCards from "./ExpandCards";
+import { Link } from "react-scroll";
 
 const Domain = () => {
   return (
@@ -16,7 +17,7 @@ const Domain = () => {
 
       <div className="domain-content sm:max-w-[80%] flex justify-center items-center text-center px-10 pt-8 pb-14">
         <p className="flex flex-wrap text-lg sm:text-xl lg:text-2xl text-[#999999]">
-          With the help of our wide range of services in various domains. We
+          with the help of our wide range of services in various domains. We
           have successfully covered various companies globally. In our time
           frame, we have designed several apps for different companies that have
           benefited from it and can scale their business to new heights. We will
@@ -26,7 +27,15 @@ const Domain = () => {
       </div>
 
       <div className="w-full h-full flex items-center justify-center">
-        <ExpandCards />
+      <Link
+        activeClass="active"
+        to="contactus"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={100}
+      >
+      <ExpandCards /></Link>
       </div>
 
       {/* <div className="hidden md:flex gap-6 cursor-pointer py-14 ">

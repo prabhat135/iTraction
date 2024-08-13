@@ -110,7 +110,7 @@ const Laptop = () => {
         <animated.img
   src={selectedWork.laptopViewImages[currentLaptopImageIndex]}
   alt={`laptop-view-${currentLaptopImageIndex}`}
-  className={`w-[100%] max-w-full h-auto ${selectedWork.title == "Adiray Global" ? "md:aspect-[22/11]" : "md:aspect-[16/10]"} object-cover  md:max-w-[900px]`}
+  className={`w-[100%] max-w-full h-auto ${selectedWork.title === "Adiray Global" ? "md:aspect-[22/11]" : "md:aspect-[16/10]"} object-cover  md:max-w-[900px]`}
 
   // className=`{w-[100%] max-w-full h-auto md:aspect-[22/11] ${selectedWork.laptopViewImages[currentLaptopImageIndex]==0 ?"md:aspect-[22/11]":"md:aspect-[16/11]"} object-cover bg-red-400  md:max-w-[900px]}`
   style={laptopImageSpring}

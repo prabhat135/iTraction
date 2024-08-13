@@ -52,7 +52,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Home
             </Link>
@@ -64,7 +64,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Service
             </Link>
@@ -76,7 +76,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Works
             </Link>
@@ -88,7 +88,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Contacts
             </Link>
@@ -134,7 +134,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Home
             </Link>
@@ -146,7 +146,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Service
             </Link>
@@ -158,7 +158,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Works
             </Link>
@@ -170,7 +170,7 @@ const Header2 = ({ isVisible }) => {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={300}
+              duration={100}
             >
               Contacts
             </Link>

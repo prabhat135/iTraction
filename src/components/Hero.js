@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import "../index.css";
 import NumberCounter from 'number-counter';
+import { Link } from "react-scroll";
 
 const statsData = [
   {
@@ -86,11 +87,18 @@ const Hero = () => {
                 </p>
               </div>
               <div className="text-center lg:text-left">
-                <a href="#contactus">
+              <Link
+                activeClass="active"
+                to="contactus"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={100}
+              >
                 <button className="hero-btn px-4 py-2 cursor-pointer bg-white text-black hover:text-white dark:border dark:border-black rounded-full text-lg lg:text-xl">
                   <span>Get Started</span>
                 </button>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="hero-image pr-0 lg:pr-10 flex justify-center lg:justify-end">

@@ -44,7 +44,7 @@ const Portfolio = () => {
 
       <div className="service-content text-center items-center px-0 sm:px-20 md:px-28 lg:px-40 pt-3 pb-14">
         <p className="flex flex-wrap text-lg md:text-xl lg:text-2xl text-[#999999]">
-          Look at how businesses have leveraged our services to excel at what
+          look at how businesses have leveraged our services to excel at what
           they do. We are excited to add you to our list of happy clients.
         </p>
       </div>
