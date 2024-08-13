@@ -7,6 +7,7 @@
   flex-wrap: wrap;
 }
 
+
 .circle {
   background-color: #04abe2;
   border-radius: 50%;
@@ -50,10 +51,10 @@
 }
 
 /* Hover effects for circles */
-.circle:hover {
+/* .circle:hover {
   transform: scale(1.5);
   z-index: 10;
-}
+} */
 
 /* Responsive styles */
 @media (max-width: 950px) {
@@ -137,3 +138,99 @@
     left: 30%;
   }
 }
+
+.blur {
+  filter: blur(4px);
+}
+
+
+.ourservices-bubbles {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bubble {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.bubble1 {
+  width: 130px;
+  height: 130px;
+  top: 10px;
+  right: 290px;
+}
+
+.bubble2 {
+  width: 120px;
+  height: 120px;
+  top: 380px;
+  right: 490px;
+}
+
+.bubble3 {
+  width: 90px;
+  height:90px;
+  top:150px;
+  right: 50px;
+}
+
+.bubble4 {
+  width: 120px;
+  height: 120px;
+  top: 380px;
+  right: 120px;
+}
+
+.bubble5 {
+  width: 170px;
+  height: 170px;
+ top: 210px;
+  right: 280px;
+}
+
+@media (max-width: 600px) {
+  .bubble {
+    pointer-events: none;
+  }
+
+  .bubble1 {
+    width: 100px;
+    height: 100px;
+    top: 5%;
+    left: 5%;
+  }
+
+  .bubble2 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    right: 5%;
+  }
+
+  .bubble3 {
+    width: 90px;
+    height: 90px;
+    bottom: 10%;
+    left: 5%;
+  }
+
+  .bubble4 {
+    width: 70px;
+    height: 70px;
+    bottom: 10%;
+    right: 5%;
+  }
+
+  .bubble5 {
+    width: 140px;
+    height: 140px;
+    top: 30%;
+    left: 30%;
+  }
+}
+

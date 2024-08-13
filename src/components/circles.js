@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "../css/circles.css";
-
+import gsap from 'gsap';
 const handleHover = (index) => {
   document.querySelectorAll(".circle").forEach((circle, i) => {
     circle.classList.remove("hovered");
@@ -39,28 +39,70 @@ const handleMouseOut = () => {
 // };
 
 const Circles = () => {
-  useEffect(() => {
-    const circles = document.querySelectorAll(".circle");
-    circles.forEach((circle, index) => {
-      circle.addEventListener("mouseover", () => handleHover(index));
-      circle.addEventListener("mouseout", handleMouseOut);
-      // circle.addEventListener("touchstart", () => handleTouch(index));
-      // circle.addEventListener("touchend", handleTouchEnd);
-    });
+  // useEffect(() => {
+  //   const circles = document.querySelectorAll(".circle");
+  //   circles.forEach((circle, index) => {
+  //     circle.addEventListener("mouseover", () => handleHover(index));
+  //     circle.addEventListener("mouseout", handleMouseOut);
+  //     // circle.addEventListener("touchstart", () => handleTouch(index));
+  //     // circle.addEventListener("touchend", handleTouchEnd);
+  //   });
 
-    return () => {
-      circles.forEach((circle,index) => {
-        circle.removeEventListener("mouseover", () => handleHover(index));
-        circle.removeEventListener("mouseout", handleMouseOut);
-        // circle.removeEventListener("touchstart", () => handleTouch(index));
-        // circle.removeEventListener("touchend", handleTouchEnd);
-      });
-    };
-  }, []);
+  //   return () => {
+  //     circles.forEach((circle,index) => {
+  //       circle.removeEventListener("mouseover", () => handleHover(index));
+  //       circle.removeEventListener("mouseout", handleMouseOut);
+  //       // circle.removeEventListener("touchstart", () => handleTouch(index));
+  //       // circle.removeEventListener("touchend", handleTouchEnd);
+  //     });
+  //   };
+  // }, []);
+
+  
+  
+
+
+
+useEffect(() => {
+  const circles = document.querySelectorAll('.circle');
+
+  const handleMouseOver = (hoveredCircle) => {
+    gsap.to(hoveredCircle, { scale: 1.7, duration: 0.3 });
+    circles.forEach(circle => {
+      if (circle !== hoveredCircle) {
+        gsap.to(circle, { scale: 0.8, duration: 0.3 });
+        circle.classList.add("blur");
+      }
+    });
+  };
+
+  const handleMouseOut = () => {
+    gsap.to(circles, { scale: 1, duration: 0.3 });
+    circles.forEach(circle => {
+      circle.classList.remove("blur");
+    });
+  };
+
+  circles.forEach(circle => {
+    circle.addEventListener('mouseover', () => handleMouseOver(circle));
+    circle.addEventListener('mouseout', handleMouseOut);
+  });
+
+  // Cleanup event listeners on component unmount
+  return () => {
+    circles.forEach(circle => {
+      circle.removeEventListener('mouseover', () => handleMouseOver(circle));
+      circle.removeEventListener('mouseout', handleMouseOut);
+    });
+  };
+}, []);
+
+
+
 
   return (
-    <div className="circles w-[100%] md:w-[80%] h-full">
-      <div className="circle circle1 bg-[#04ABE2]">
+    <div className="circles  w-[100%] md:w-[80%] h-full">
+      <div className="circle  circle1 bg-[#04ABE2]">
         <img
           src="../assets/circle_elearning.png"
           alt="circle-images"

@@ -1,5 +1,6 @@
 import React from "react";
 import Circles from "./circles";
+import Circles2 from "./circles2";
 
 const Service = () => {
   return (
@@ -17,6 +18,7 @@ const Service = () => {
         </div>
 
         <Circles />
+        {/* <Circles2 /> */}
       </div>
     </section>
   );
