@@ -205,3 +205,6 @@ code {
     transform: translateX(-100%);
   }
 }
+.icon-container {
+  transition: opacity 0.3s ease-in-out;
+}

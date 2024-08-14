@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import "../index.css";
 import { Link } from "react-scroll";
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import Brightness3Icon from '@mui/icons-material/Brightness3';
 
 const Header2 = ({ isVisible }) => {
   const [darkMode, setdarkMode] = useState(false);
@@ -93,9 +95,16 @@ const Header2 = ({ isVisible }) => {
               Contacts
             </Link>
           </li>
-          <button onClick={toggleDarkMode} className="">
-            <img src="./assets/dark_button.png" alt="" className="hidden dark:block"/>
-            <img src="./assets/light_button.png" alt="" className="dark:hidden"/>
+          <button onClick={toggleDarkMode} className=" flex justify-center items-center ">
+          
+      <div className=' dark:hidden icon-container   hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 '><WbSunnyIcon  /></div>
+      
+      <div className=' hidden icon-container dark:block hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95'> <Brightness3Icon /></div>
+
+     
+
+            {/* <img src="./assets/dark_button.png" alt="" className="hidden dark:block"/>
+            <img src="./assets/light_button.png" alt="" className="dark:hidden"/> */}
           </button>
         </ul>
       </div>
