@@ -103,11 +103,11 @@ const Header = () => {
             </Link>
           </li>
           <button onClick={toggleDarkMode} className="">
-            <div className="dark:hidden icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+            <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
               <WbSunnyIcon />
             </div>
 
-            <div className="hidden dark:block icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+            <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
               {" "}
               <Brightness3Icon />
             </div>
