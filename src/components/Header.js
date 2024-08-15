@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import "../index.css";
 import { Link } from "react-scroll";
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import Brightness3Icon from '@mui/icons-material/Brightness3';
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import Brightness3Icon from "@mui/icons-material/Brightness3";
 
 const Header = () => {
   const [darkMode, setdarkMode] = useState(false);
@@ -40,16 +40,20 @@ const Header = () => {
   return (
     <div className="header flex justify-between items-center px-4 lg:px-12 py-4 z-10">
       <div className="logo w-24 h-24">
-        <img src="./assets/main_logo.png" alt="Logo" className="dark:hidden" />
+        <img
+          src="./assets/main_logo.png"
+          alt="Logo"
+          className="hidden dark:block"
+        />
         <img
           src="./assets/main_logo_white.png"
           alt="Logo"
-          class="hidden dark:block"
+          class="dark:hidden"
         />
       </div>
 
       <div className="header-item hidden lg:flex">
-        <ul className="flex gap-8 text-lg text-white dark:text-black font-normal">
+        <ul className="flex gap-8 text-lg text-black dark:text-white font-normal">
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             <Link
               activeClass="active"
@@ -99,12 +103,15 @@ const Header = () => {
             </Link>
           </li>
           <button onClick={toggleDarkMode} className="">
+            <div className="dark:hidden icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+              <WbSunnyIcon />
+            </div>
 
-          <div className=' dark:hidden icon-container   hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 '><WbSunnyIcon  /></div>
-      
-      <div className=' hidden icon-container dark:block hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95'> <Brightness3Icon /></div>
+            <div className="hidden dark:block icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+              {" "}
+              <Brightness3Icon />
+            </div>
 
-     
             {/* <img
               src="./assets/dark_button.png"
               alt=""
@@ -120,7 +127,7 @@ const Header = () => {
       </div>
       <div className="hidden lg:block">
         <a href="https://calendly.com/itraction" target="blank">
-          <button className="header-btn px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none dark:bg-white dark:hover:text-white">
+          <button className="header-btn px-4 py-2 cursor-pointer text-xl text-black hover:text-white dark:text-white border border-black dark:border-white hover:border-none rounded-full bg-white dark:bg-transparent">
             <span>Schedule a Meeting</span>
           </button>
         </a>
@@ -128,7 +135,7 @@ const Header = () => {
 
       <div className="lg:hidden flex items-center">
         <div onClick={toggleMenu}>
-          <Bars3Icon className="w-8 h-8 cursor-pointer text-white dark:text-black" />
+          <Bars3Icon className="w-8 h-8 cursor-pointer text-black dark:text-white" />
         </div>
       </div>
 
@@ -137,65 +144,73 @@ const Header = () => {
           ref={menuRef}
           className="lg:hidden fixed w-[100%] right-0.5 h-full top-0 flex justify-center items-center z-50"
         >
-          <div className="w-[100%] h-[100%] bg-gradient-to-br from-[#6C6C6C] to-black p-4 dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
+          <div className="w-[100%] h-[100%] bg-gradient-to-br from-[#F4F4F4] to-[#B9E2F0] p-4 dark:from-[#6C6C6C] dark:to-black">
             <div
               onClick={toggleMenu}
-              className="inset-1 w-9 z-[50] cursor-pointer text-white dark:text-black"
+              className="inset-1 w-9 z-[50] cursor-pointer text-black dark:text-white"
             >
               <XMarkIcon />
             </div>
             <ul className="flex flex-col  pb-[3rem] items-center h-full justify-between">
-              <div className="flex w-[100%] flex-col gap-[4rem] text-[2.2rem] mt-5 items-center text-lg text-white dark:text-black font-normal py-4">
+              <div className="flex w-[100%] flex-col gap-[4rem] text-[2.2rem] mt-5 items-center text-lg text-black dark:text-white font-normal py-4">
                 <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-                <Link
-              activeClass="active"
-              to="hero"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
-            >
-              Home
-            </Link>
+                  <Link
+                    activeClass="active"
+                    to="hero"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Home
+                  </Link>
                 </li>
                 <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-                <Link
-              activeClass="active"
-              to="service"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
-            >
-              Service
-            </Link>
+                  <Link
+                    activeClass="active"
+                    to="service"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Service
+                  </Link>
                 </li>
                 <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-                <Link
-              activeClass="active"
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
-            >
-              Works
-            </Link>
+                  <Link
+                    activeClass="active"
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Works
+                  </Link>
                 </li>
                 <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-                <Link
-              activeClass="active"
-              to="contactus"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
-            >
-              Contacts
-            </Link>
+                  <Link
+                    activeClass="active"
+                    to="contactus"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Contacts
+                  </Link>
                 </li>
                 <button onClick={toggleDarkMode} className="">
-                  <img
+                  <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+                    <WbSunnyIcon />
+                  </div>
+
+                  <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+                    {" "}
+                    <Brightness3Icon />
+                  </div>
+                  {/* <img
                     src="./assets/dark_button.png"
                     alt=""
                     className="hidden dark:block"
@@ -204,11 +219,11 @@ const Header = () => {
                     src="./assets/light_button.png"
                     alt=""
                     className="dark:hidden"
-                  />
+                  /> */}
                 </button>
               </div>
               <a href="https://calendly.com/itraction" target="blank">
-                <button className="header-btn px-4 py-2 mb-[70px] cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none dark:bg-white dark:hover:text-white">
+                <button className="header-btn px-4 py-2 mb-[70px] cursor-pointer text-xl text-black hover:text-white dark:text-white border border-black dark:border-white rounded-full bg-white dark:bg-transparent hover:border-none">
                   <span>Schedule a Meeting</span>
                 </button>
               </a>

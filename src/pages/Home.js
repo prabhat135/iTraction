@@ -32,7 +32,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="bg-[#151515] dark:bg-white">
+    <div className="bg-white dark:bg-[#151515]">
     <Header2 isVisible={showHeader} />
     <Hero />
     <AboutUs />

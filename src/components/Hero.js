@@ -48,22 +48,22 @@ const Hero = () => {
 
   return (
     <div id="hero" className="">
-      <div className="hero dark:bg-white px-4 pt-4 sm:px-8 sm:pt-8">
-        <div className="bg-gradient-to-br from-[#6C6C6C] to-black rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#F4F4F4] dark:to-[#B9E2F0]">
+      <div className="hero dark:bg-black px-4 pt-4 sm:px-8 sm:pt-8">
+        <div className="bg-gradient-to-br from-[#F4F4F4] to-[#B9E2F0] rounded-[30px] flex flex-col overflow-hidden dark:bg-gradient-to-br dark:from-[#6C6C6C] dark:to-black">
           {/* ____HEADER____ */}
           <Header />
 
           {/* ____HERO MAIN____ */}
           <div className="hero-main flex flex-col lg:flex-row justify-evenly">
             <div className="hero-content w-full lg:w-[48%] xl:w-[46%] py-10 px-6 lg:px-16">
-              <div className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white dark:text-black font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
+              <div className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-white font-medium pb-8 lg:pb-10 text-center lg:text-left leading-tight">
                 <div className="items-center gap-4 justify-center lg:justify-start">
                   Enterprise Business
                   <br />
                   <p className="mt-2 lg:mt-4">
                     <span>with </span>
                     <span className="bg-[#04ABE2] display-block rounded-full px-3 py-1 md:py-2 marquee-container w-[170px] md:w-[200px] lg:w-[209px] xl:w-[240px] 2xl:w-[290px] mb-[-14px] md:mb-[-18px]">
-                      <span className="marquee-text dark:text-white">
+                      <span className="marquee-text text-white">
                         Artificial Intelligence
                       </span>
                     </span>
@@ -80,7 +80,7 @@ const Hero = () => {
               </div>
 
               <div className="text-center lg:text-left">
-                <p className="text-lg lg:text-xl xl:text-2xl text-white dark:text-black leading-8 mb-6 lg:mb-10 px-0 sm:px-20 md:px-40 lg:px-0">
+                <p className="text-lg lg:text-xl xl:text-2xl text-black dark:text-white leading-8 mb-6 lg:mb-10 px-0 sm:px-20 md:px-40 lg:px-0">
                   Backed with Latest Technology to Deliver{" "}
                   <br className="hidden lg:block" /> Best in Class User
                   Experience.
@@ -95,7 +95,7 @@ const Hero = () => {
                 offset={-70}
                 duration={100}
               >
-                <button className="hero-btn px-4 py-2 cursor-pointer bg-white text-black hover:text-white dark:border dark:border-black rounded-full text-lg lg:text-xl">
+                <button className="hero-btn px-4 py-2 cursor-pointer bg-white text-black hover:text-white border border-black rounded-full text-lg lg:text-xl">
                   <span>Get Started</span>
                 </button>
                 </Link>
@@ -122,18 +122,18 @@ const Hero = () => {
                 <img
                   src={item.image}
                   alt=""
-                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto dark:hidden"
+                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto hidden dark:block"
                 />
                 <img
                   src={item.darkimage}
                   alt=""
-                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto hidden dark:block"
+                  className="h-[65px] lg:h-[95px] max-h-[70px] mx-auto dark:hidden"
                 />
-                <h3 className="text-white dark:text-black text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
+                <h3 className="text-black dark:text-white text-xl lg:text-2xl font-semibold text-center pt-2 lg:pt-4 group-hover:text-[#04ABE2]">
                   {item.number}
                 </h3>
                 <div className="absolute left-0 right-0 text-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-600">
-                  <p className="text-white dark:text-black text-sm pt-2 font-medium">
+                  <p className="text-black dark:text-white text-sm pt-2 font-medium">
                     {item.text}
                   </p>
                 </div>

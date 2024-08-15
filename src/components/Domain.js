@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 
 const Domain = () => {
   return (
-    <div className="domain flex flex-col justify-center items-center p-8 dark:bg-white">
+    <div className="domain flex flex-col justify-center items-center p-8 dark:bg-black">
       <div className="domain-heading text-center flex justify-center items-center ">
-        <h1 className="text-4xl sm:text-5xl xl:text-6xl text-white dark:text-black font-medium mt-8 leading-none">
+        <h1 className="text-4xl sm:text-5xl xl:text-6xl text-black dark:text-white font-medium mt-8 leading-none">
           do you have an idea?
           <br />
           <span className="text-[#04ABE2] rounded-full px-3 py-2">

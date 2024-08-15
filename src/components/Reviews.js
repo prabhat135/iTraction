@@ -6,7 +6,7 @@ import TestimonialsCarousel from "./swiper-testimonials";
 
 const Testimonials = () => {
   return (
-    <div className="text-white h-[102vh] md:h-full flex flex-col justify-between overflow-hidden dark:bg-white">
+    <div className="text-white h-[102vh] md:h-full flex flex-col justify-between overflow-hidden dark:bg-black">
       <div className="max-w-9xl mx-auto w-full flex flex-col md:flex-row md:p-6">
         <div className="md:w-[40%] ml-10 mt-14 md:mt-72 relative md:pr-8">
           <img
@@ -19,7 +19,7 @@ const Testimonials = () => {
             src="/colon.svg"
             alt=""
           />
-          <h2 className="font-medium mb-8 text-white text-4xl sm:text-5xl xl:text-6xl text-center md:text-left dark:text-black">
+          <h2 className="font-medium mb-8 text-black dark:text-white text-4xl sm:text-5xl xl:text-6xl text-center md:text-left">
             what <span className="text-[#04ABE2]">our</span> <br />customers <span className="text-[#04ABE2]">says</span>
           </h2>
           <p className="mb-8 text-lg lg:text-2xl text-[#999999] text-center md:text-left">

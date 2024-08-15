@@ -1,24 +1,27 @@
 import { useEffect } from "react";
 import "../css/circles.css";
 import gsap from 'gsap';
-const handleHover = (index) => {
-  document.querySelectorAll(".circle").forEach((circle, i) => {
-    circle.classList.remove("hovered");
-    circle.classList.remove("shift");
-    if (i === index) {
-      circle.classList.add("hovered");
-    } else {
-      circle.classList.add("shift");
-    }
-  });
-};
+import { Link } from "react-scroll";
 
-const handleMouseOut = () => {
-  document.querySelectorAll(".circle").forEach((circle) => {
-    circle.classList.remove("hovered");
-    circle.classList.remove("shift");
-  });
-};
+// const handleHover = (index) => {
+//   document.querySelectorAll(".circle").forEach((circle, i) => {
+//     circle.classList.remove("hovered");
+//     circle.classList.remove("shift");
+//     if (i === index) {
+//       circle.classList.add("hovered");
+//     } else {
+//       circle.classList.add("shift");
+//     }
+//   });
+// };
+
+// const handleMouseOut = () => {
+//   document.querySelectorAll(".circle").forEach((circle) => {
+//     circle.classList.remove("hovered");
+//     circle.classList.remove("shift");
+//   });
+// };
+
 // const handleTouch = (index) => {
 //   document.querySelectorAll(".circle").forEach((circle, i) => {
 //     circle.classList.remove("hovered");
@@ -101,34 +104,60 @@ useEffect(() => {
 
 
   return (
-    <div className="circles  w-[100%] md:w-[80%] h-full">
-      <div className="circle  circle1 bg-[#04ABE2]">
-        <img
-          src="../assets/circle_elearning.png"
-          alt="circle-images"
-          className=""
-        />
+    <div className="circles w-[100%] md:w-[80%] h-full">
+      <div className="circle circle1 bg-[#04ABE2]">
+      <Link
+        activeClass="active"
+        to="contactus"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={100}
+      ><img src="../assets/circle_elearning.png" alt="circle-images" className="" /></Link>
+      </div>
 
-      </div>
       <div className="circle circle2 bg-[#04ABE2]">
-        <img src="../assets/circle_food.png" alt="circle-images" className="" />
+      <Link
+        activeClass="active"
+        to="contactus"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={100}
+      ><img src="../assets/circle_food.png" alt="circle-images" className="" /></Link>
       </div>
+
       <div className="circle circle3 bg-[#04ABE2]">
-        <img
-          src="../assets/circle_banking.png"
-          alt="circle-images"
-          className=""
-        />
+      <Link
+        activeClass="active"
+        to="contactus"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={100}
+      ><img src="../assets/circle_banking.png" alt="circle-images" className="" /></Link>
       </div>
+
       <div className="circle circle4 bg-[#04ABE2]">
-        <img src="../assets/circle_hrms.png" alt="circle-images" className="" />
+      <Link
+        activeClass="active"
+        to="contactus"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={100}
+      ><img src="../assets/circle_hrms.png" alt="circle-images" className="" /></Link>
       </div>
+
       <div className="circle circle5 bg-[#04ABE2]">
-        <img
-          src="../assets/circle_app_dev.png"
-          alt="circle-images"
-          className=""
-        />
+      <Link
+        activeClass="active"
+        to="contactus"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={100}
+      ><img src="../assets/circle_app_dev.png" alt="circle-images" className="" /></Link>
       </div>
     </div>
   );

@@ -65,7 +65,7 @@ const Laptop = () => {
   };
 
   return (
-    <div className="relative flex flex-col lg:flex-row  gap-5   lg:justify-between  items-center   min-h-screen p-4 md:p-10 bg-gray-900 text-white dark:bg-white">
+    <div className="relative flex flex-col lg:flex-row gap-5 lg:justify-between items-center min-h-screen p-4 md:p-10 text-white bg-white dark:bg-gray-900">
       {/* Background Image */}
 
       {/* Circles in Background */}

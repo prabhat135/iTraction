@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import "../index.css";
 import { Link } from "react-scroll";
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import Brightness3Icon from '@mui/icons-material/Brightness3';
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import Brightness3Icon from "@mui/icons-material/Brightness3";
 
 const Header2 = ({ isVisible }) => {
   const [darkMode, setdarkMode] = useState(false);
@@ -19,7 +19,6 @@ const Header2 = ({ isVisible }) => {
     setIsMenuOpen((prevState) => !prevState);
   }, []);
 
-  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -29,26 +28,38 @@ const Header2 = ({ isVisible }) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [isMenuOpen, toggleMenu]);
 
   return (
-    <div className={`header2 flex justify-between items-center px-8 sm:px-12 lg:px-20 py-8 fixed top-0 left-0 w-full bg-gradient-to-b from-[#151515] via-[#1c1c1c] to-transparent z-10 transition-opacity duration-500 dark:from-white dark:to-transparent ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div
+      className={`header2 flex justify-between items-center px-8 sm:px-12 lg:px-20 py-8 fixed top-0 left-0 w-full z-10 transition-opacity duration-500 bg-gradient-to-b from-white via-[#f2f2f2] via-70% to-transparent dark:from-[#151515] dark:via-[#1c1c1c] dark:via-50% dark:to-transparent ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="logo">
-        <img src="./assets/main_logo_2.png" alt="Logo" className="w-24 h-16 cursor-pointer dark:hidden" />
-        <img src="./assets/main_logo_2_dark.png" alt="Logo" className="w-24 h-16 cursor-pointer hidden dark:block" />
+        <img
+          src="./assets/main_logo_2.png"
+          alt="Logo"
+          className="w-24 h-16 cursor-pointer hidden dark:block"
+        />
+        <img
+          src="./assets/main_logo_2_dark.png"
+          alt="Logo"
+          className="w-24 h-16 cursor-pointer dark:hidden"
+        />
       </div>
 
       <div className="header-item  hidden  lg:flex">
-        <ul className="flex gap-8 text-lg text-white dark:text-black font-normal">
+        <ul className="flex gap-8 text-lg text-black dark:text-white font-normal">
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          <Link
+            <Link
               activeClass="active"
               to="hero"
               spy={true}
@@ -60,7 +71,7 @@ const Header2 = ({ isVisible }) => {
             </Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          <Link
+            <Link
               activeClass="active"
               to="service"
               spy={true}
@@ -72,7 +83,7 @@ const Header2 = ({ isVisible }) => {
             </Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          <Link
+            <Link
               activeClass="active"
               to="portfolio"
               spy={true}
@@ -84,7 +95,7 @@ const Header2 = ({ isVisible }) => {
             </Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-          <Link
+            <Link
               activeClass="active"
               to="contactus"
               spy={true}
@@ -95,13 +106,18 @@ const Header2 = ({ isVisible }) => {
               Contacts
             </Link>
           </li>
-          <button onClick={toggleDarkMode} className=" flex justify-center items-center ">
-          
-      <div className=' dark:hidden icon-container   hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 '><WbSunnyIcon  /></div>
-      
-      <div className=' hidden icon-container dark:block hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95'> <Brightness3Icon /></div>
+          <button
+            onClick={toggleDarkMode}
+            className=" flex justify-center items-center "
+          >
+            <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+              <WbSunnyIcon />
+            </div>
 
-     
+            <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+              {" "}
+              <Brightness3Icon />
+            </div>
 
             {/* <img src="./assets/dark_button.png" alt="" className="hidden dark:block"/>
             <img src="./assets/light_button.png" alt="" className="dark:hidden"/> */}
@@ -110,11 +126,11 @@ const Header2 = ({ isVisible }) => {
       </div>
 
       <div className="hidden lg:block">
-      <a href="https://calendly.com/itraction" target="blank">
-        <button className="header-btn px-4 py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none dark:hover:text-white">
-          <span>Schedule a Meeting</span>
-        </button>
-      </a>
+        <a href="https://calendly.com/itraction" target="blank">
+          <button className="header-btn px-4 py-2 cursor-pointer text-xl text-black hover:text-white dark:text-white border border-black dark:border-white hover:border-none rounded-full bg-white dark:bg-transparent">
+            <span>Schedule a Meeting</span>
+          </button>
+        </a>
       </div>
 
       <div className="lg:hidden flex items-center">
@@ -124,80 +140,97 @@ const Header2 = ({ isVisible }) => {
       </div>
 
       {isMenuOpen && (
-  <div
-  ref={menuRef}
-   className="lg:hidden fixed w-[100%] right-0.5 h-full top-0 flex justify-center items-center z-50">
-    <div className="w-[100%] h-[100%] bg-gradient-to-br from-[#6C6C6C] to-black p-4 dark:from-[#F4F4F4] dark:to-[#B9E2F0] dark:shadow-xl">
-      <div
-        onClick={toggleMenu}
-        className="inset-1 w-9 z-[50] cursor-pointer text-white dark:text-black"
-      >
-        <XMarkIcon />
-      </div>
-      <ul className="flex flex-col pb-[3rem] items-center h-full justify-between">
-      <div className="flex flex-col w-[100%] gap-[4rem] text-[2.2rem] mt-5 items-center text-lg text-white dark:text-black font-normal py-4">
-        <li className="cursor-pointer  tracking-wide hover:text-[#04abe2]">
-        <Link
-              activeClass="active"
-              to="hero"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
+        <div
+          ref={menuRef}
+          className="lg:hidden fixed w-[100%] right-0.5 h-full top-0 flex justify-center items-center z-50"
+        >
+          <div className="w-[100%] h-[100%] bg-gradient-to-br from-[#6C6C6C] to-black p-4 dark:from-[#F4F4F4] dark:to-[#B9E2F0] dark:shadow-xl">
+            <div
+              onClick={toggleMenu}
+              className="inset-1 w-9 z-[50] cursor-pointer text-black dark:text-white"
             >
-              Home
-            </Link>
-        </li>
-        <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-        <Link
-              activeClass="active"
-              to="service"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
-            >
-              Service
-            </Link>
-        </li>
-        <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-        <Link
-              activeClass="active"
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
-            >
-              Works
-            </Link>
-        </li>
-        <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
-        <Link
-              activeClass="active"
-              to="contactus"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={100}
-            >
-              Contacts
-            </Link>
-        </li>
-        <button onClick={toggleDarkMode} className="">
-          <img src="./assets/dark_button.png" alt="" className="hidden dark:block"/>
-          <img src="./assets/light_button.png" alt="" className="dark:hidden"/>
-        </button>
+              <XMarkIcon />
+            </div>
+            <ul className="flex flex-col pb-[3rem] items-center h-full justify-between">
+              <div className="flex flex-col w-[100%] gap-[4rem] text-[2.2rem] mt-5 items-center text-lg font-normal py-4">
+                <li className="cursor-pointer  tracking-wide hover:text-[#04abe2]">
+                  <Link
+                    activeClass="active"
+                    to="hero"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
+                  <Link
+                    activeClass="active"
+                    to="service"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Service
+                  </Link>
+                </li>
+                <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
+                  <Link
+                    activeClass="active"
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Works
+                  </Link>
+                </li>
+                <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
+                  <Link
+                    activeClass="active"
+                    to="contactus"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Contacts
+                  </Link>
+                </li>
+                <button onClick={toggleDarkMode} className="">
+                  <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+                    <WbSunnyIcon />
+                  </div>
+
+                  <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+                    {" "}
+                    <Brightness3Icon />
+                  </div>
+                  {/* <img
+                    src="./assets/dark_button.png"
+                    alt=""
+                    className="hidden dark:block"
+                  />
+                  <img
+                    src="./assets/light_button.png"
+                    alt=""
+                    className="dark:hidden"
+                  /> */}
+                </button>
+              </div>
+              <a href="https://calendly.com/itraction" target="blank">
+                <button className="header-btn px-4 mb-[70px] py-2 cursor-pointer text-xl text-black hover:text-white dark:text-white border border-black dark:border-white hover:border-none rounded-full bg-white dark:bg-transparent">
+                  <span>Schedule a Meeting</span>
+                </button>
+              </a>
+            </ul>
+          </div>
         </div>
-        <a href="https://calendly.com/itraction" target="blank">
-        <button className="header-btn px-4 mb-[70px] py-2 cursor-pointer text-xl text-white dark:text-black border dark:border-black rounded-full bg-transparent hover:border-none">
-          <span>Schedule a Meeting</span>
-        </button>
-        </a>
-      </ul>
-    </div>
-  </div>
-)}
+      )}
     </div>
   );
 };
