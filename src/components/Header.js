@@ -52,8 +52,8 @@ const Header = () => {
         />
       </div>
 
-      <div className="header-item hidden lg:flex">
-        <ul className="flex gap-8 text-lg text-black dark:text-white font-normal">
+      <div className="header-item hidden lg:flex gap-8">
+        <ul className="flex gap-8 text-lg text-black dark:text-white font-normal items-center">
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             <Link
               activeClass="active"
@@ -102,12 +102,13 @@ const Header = () => {
               Contacts
             </Link>
           </li>
-          <button onClick={toggleDarkMode} className="">
-            <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+        </ul>
+        <button onClick={toggleDarkMode} className="text-black dark:text-white">
+            <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-[10px] justify-center items-center rounded-full transition transform active:scale-95 ">
               <WbSunnyIcon />
             </div>
 
-            <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+            <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[135deg] p-[10px] flex justify-center items-center rounded-full transition transform active:scale-95">
               {" "}
               <Brightness3Icon />
             </div>
@@ -123,7 +124,6 @@ const Header = () => {
               className="dark:hidden"
             /> */}
           </button>
-        </ul>
       </div>
       <div className="hidden lg:block">
         <a href="https://calendly.com/itraction" target="blank">
@@ -202,11 +202,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <button onClick={toggleDarkMode} className="">
-                  <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+                  <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 px-[10px] py-2 justify-center items-center rounded-full transition transform active:scale-95 ">
                     <WbSunnyIcon />
                   </div>
 
-                  <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+                  <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-[10px] flex justify-center items-center rounded-full transition transform active:scale-95">
                     {" "}
                     <Brightness3Icon />
                   </div>

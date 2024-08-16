@@ -56,8 +56,8 @@ const Header2 = ({ isVisible }) => {
         />
       </div>
 
-      <div className="header-item  hidden  lg:flex">
-        <ul className="flex gap-8 text-lg text-black dark:text-white font-normal">
+      <div className="header-item hidden lg:flex gap-8">
+        <ul className="flex gap-8 text-lg text-black dark:text-white font-normal items-center">
           <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
             <Link
               activeClass="active"
@@ -106,15 +106,13 @@ const Header2 = ({ isVisible }) => {
               Contacts
             </Link>
           </li>
-          <button
-            onClick={toggleDarkMode}
-            className=" flex justify-center items-center "
-          >
-            <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+        </ul>
+        <button onClick={toggleDarkMode} className="text-black dark:text-white">
+            <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 px-[10px] py-2 justify-center items-center rounded-full transition transform active:scale-95 ">
               <WbSunnyIcon />
             </div>
 
-            <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+            <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-[10px] flex justify-center items-center rounded-full transition transform active:scale-95">
               {" "}
               <Brightness3Icon />
             </div>
@@ -122,7 +120,6 @@ const Header2 = ({ isVisible }) => {
             {/* <img src="./assets/dark_button.png" alt="" className="hidden dark:block"/>
             <img src="./assets/light_button.png" alt="" className="dark:hidden"/> */}
           </button>
-        </ul>
       </div>
 
       <div className="hidden lg:block">
@@ -135,7 +132,7 @@ const Header2 = ({ isVisible }) => {
 
       <div className="lg:hidden flex items-center">
         <div onClick={toggleMenu}>
-          <Bars3Icon className="w-[2rem]  h-[2rem] cursor-pointer text-white dark:text-black" />
+          <Bars3Icon className="w-[2rem] h-[2rem] cursor-pointer text-black dark:text-white" />
         </div>
       </div>
 
@@ -144,7 +141,7 @@ const Header2 = ({ isVisible }) => {
           ref={menuRef}
           className="lg:hidden fixed w-[100%] right-0.5 h-full top-0 flex justify-center items-center z-50"
         >
-          <div className="w-[100%] h-[100%] bg-gradient-to-br from-[#6C6C6C] to-black p-4 dark:from-[#F4F4F4] dark:to-[#B9E2F0] dark:shadow-xl">
+          <div className="w-[100%] h-[100%] p-4 bg-gradient-to-br from-[#F4F4F4] to-[#B9E2F0] dark:from-[#6C6C6C] dark:to-black">
             <div
               onClick={toggleMenu}
               className="inset-1 w-9 z-[50] cursor-pointer text-black dark:text-white"
@@ -152,8 +149,8 @@ const Header2 = ({ isVisible }) => {
               <XMarkIcon />
             </div>
             <ul className="flex flex-col pb-[3rem] items-center h-full justify-between">
-              <div className="flex flex-col w-[100%] gap-[4rem] text-[2.2rem] mt-5 items-center text-lg font-normal py-4">
-                <li className="cursor-pointer  tracking-wide hover:text-[#04abe2]">
+              <div className="flex flex-col w-[100%] gap-[4rem] text-[2.2rem] mt-5 items-center text-lg font-normal py-4 text-black dark:text-white">
+                <li className="cursor-pointer tracking-wide hover:text-[#04abe2]">
                   <Link
                     activeClass="active"
                     to="hero"
@@ -202,11 +199,11 @@ const Header2 = ({ isVisible }) => {
                   </Link>
                 </li>
                 <button onClick={toggleDarkMode} className="">
-                  <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 p-2 justify-center items-center rounded-full transition transform active:scale-95 ">
+                  <div className="hidden dark:block icon-container hover:bg-[#5E5E5E] bg-stone-800 px-[10px] py-2 justify-center items-center rounded-full transition transform active:scale-95 ">
                     <WbSunnyIcon />
                   </div>
 
-                  <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-2 flex justify-center items-center rounded-full transition transform active:scale-95">
+                  <div className="dark:hidden icon-container hover:bg-stone-300 bg-gray-200 rotate-[130deg] p-[10px] flex justify-center items-center rounded-full transition transform active:scale-95">
                     {" "}
                     <Brightness3Icon />
                   </div>
