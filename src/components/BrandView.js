@@ -4,6 +4,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { useParams } from 'react-router-dom';
 import '../css/brandview.css';
 import axiosInstance from "../config/axios";
+import { motion } from "framer-motion";
 
 const BrandImages = () => {
   const { workId } = useParams();
@@ -47,31 +48,56 @@ const BrandImages = () => {
     }
   };
 
+  const circleVariants = {
+    hidden: { opacity: 0, x: -300 },
+    visible: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: index * 0.1,
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
-    <div className="relative flex flex-col md:flex-row items-center min-h-screen justify-between p-4 md:p-10 bg-gray-900 text-white dark:bg-white">
+    <div className="relative flex flex-col md:flex-row items-center min-h-screen justify-between p-4 md:p-10 bg-white dark:bg-gray-900">
       {/* Circles in Background */}
-      <div className="absolute inset-0 z-10">
+
+      {Array.from({ length: 5 }).map((_, index) => (
+        <motion.div
+          key={index}
+          className={`circle circle-${index + 1}`}
+          custom={index}
+          initial="hidden"
+          animate="visible"
+          variants={circleVariants}
+        />
+      ))}
+
+      {/* <div className="absolute inset-0 z-10">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
         <div className="circle circle-3"></div>
         <div className="circle circle-4"></div>
         <div className="circle circle-5"></div>
-      </div>
+      </div> */}
 
       {/* Description Section */}
       <div className="flex flex-col flex-wrap w-full md:w-1/3 md:pr-10 mb-6 md:mb-0">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-white dark:text-black">{selectedWork.title}</h1>
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-black dark:text-white">{selectedWork.title}</h1>
         <p className="text-base md:text-lg mb-6 text-[#999999]">{selectedWork.description}</p>
         <button
           onClick={handleButtonClick}
-          className="laptop-btn text-xl bg-transparent border text-white w-1/3 py-2 px-4 hover:border-none rounded-full dark:text-black dark:hover:text-white dark:border-black"
+          className="brand-btn text-xl bg-transparent text-black dark:text-white w-1/3 py-2 px-4 border border-black dark:border-white hover:border-none rounded-full hover:text-white"
         >
           <span>Visit Project</span>
         </button>
       </div>
 
       {/* Brand Images */}
-      <div className="relative bg-gray-200 shadow-2xl w-full md:w-[800px] h-[400px] md:h-[500px] overflow-hidden rounded-lg">
+      <div className="relative bg-gray-200 shadow-2xl w-full md:w-[800px] h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
         {selectedWork.brandImages.length > 0 && (
           <animated.img
             src={selectedWork.brandImages[currentBrandImageIndex]}
